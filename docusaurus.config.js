@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: '钉钉开发者百科',
-  tagline: '开发者资料社区版，不如官方正式文档书写严谨，但是更新更快，社区可以参与贡献和完善。',
+  tagline: '开发者资料社区版，发布流程更简单，更新更快，社区可以参与贡献和完善。',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -74,7 +74,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: '开发者文档',
           },
           {to: '/blog', label: 'Blog(暂无)', position: 'left'},
           {
