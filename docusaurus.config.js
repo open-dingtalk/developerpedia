@@ -76,7 +76,7 @@ const config = {
             position: 'left',
             label: '开发者文档',
           },
-          {to: '/blog', label: 'Blog(暂无)', position: 'left'},
+          // {to: '/blog', label: 'Blog(暂无)', position: 'left'},
           {
             href: 'https://github.com/open-dingtalk/developerpedia',
             label: 'GitHub',
@@ -112,10 +112,10 @@ const config = {
           {
             title: 'More',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
+              // {
+              //   label: 'Blog',
+              //   to: '/blog',
+              // },
               {
                 label: '钉钉开放平台',
                 href: 'https://open.dingtalk.com',
