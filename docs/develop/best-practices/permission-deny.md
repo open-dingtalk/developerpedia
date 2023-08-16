@@ -51,7 +51,7 @@ sidebar_position: 1
 
 以上问题通过接入[统一授权套件](https://open.dingtalk.com/document/personalapp/access-process)都可以得到解决。
 
-**2、是否一定要接入[统一授权套件](https://open.dingtalk.com/document/personalapp/access-process)**
+**2、是否一定要接入[统一授权套件](https://open.dingtalk.com/document/personalapp/access-process)？**
 
 是的，正规的应用原则上必须要要接入。否则会因为这些原因出现无权限问题
 
