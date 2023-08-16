@@ -2,6 +2,7 @@
   "label": "开发",
   "position": 4,
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "description": "基于文档和 SDK 开发钉钉平台各种应用，包括工作台、酷应用、机器人等能力。"
   }
 }

@@ -2,6 +2,7 @@
   "label": "学习",
   "position": 3,
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "description": "学习钉钉开放平台常见概念和模型，了解各项能力背后的原理、信息，学习如何开发各种应用。"
   }
 }

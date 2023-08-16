@@ -78,7 +78,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog(暂无)', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/open-dingtalk/developerpedia',
             label: 'GitHub',
             position: 'right',
           },
