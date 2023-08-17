@@ -16,7 +16,6 @@ sidebar_position: 1
 2. 即将下线，已创建的机器人不受影响，详见[公告](https://open.dingtalk.com/document/orgapp/webhook-bot-offline-notice)
 3. 仅支持通过机器人发送消息到群中，不支持通过机器人接收消息
 
-
 ### 参考资料
 
 1. 相关SDK及示例

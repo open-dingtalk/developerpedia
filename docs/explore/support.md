@@ -32,13 +32,15 @@ import TabItem from '@theme/TabItem';
 
 <TabItem value="groups" label="共创群中交流">
 
-在[钉钉开发者后台](https://open-dev.dingtalk.com)的右下角中，点击开发小助手悬浮按钮，在弹出的浮层中，点击“开发者答疑群”：
-
-![ticket.png](/img/explore/support/ticket.jpg)
+在[钉钉开发者后台](https://open-dev.dingtalk.com)的右下角中，点击开发小助手悬浮按钮，在弹出的浮层中，点击“开发者答疑群”。
 
 也可以在相关的新技术文档中，找到对应的共创群。例如：
 
 * [Stream 模式 Python SDK](https://github.com/open-dingtalk/dingtalk-stream-sdk-python) 首页提供了 Stream 模式共创群二维码
+
+开发者后台进入答疑群的操作说明如下：
+
+![ticket.png](/img/explore/support/ticket.jpg)
 
 </TabItem>
 

@@ -19,6 +19,8 @@ sidebar_position: 1
 
 更多语言 SDK 欢迎社区参与贡献，将在次页面中予以推荐展示。
 
+开发时候，可以参考[Stream Mode 协议文档](https://open.dingtalk.com/document/direction/stream-mode-protocol-access-description)，或者以上其他语言的 SDK，过程中有问题也可以通过[技术支持](/docs/explore/support)提交反馈和问题交流。
+
 ### OpenAPI SDK
 
 服务端 API 分为新旧版本，相关 SDK 如下：
@@ -30,6 +32,8 @@ sidebar_position: 1
 
 ## 社区贡献 SDK
 
-
-
 更多开源项目参考：https://github.com/weir-cloud/awesome-dingtalk
+
+## 相关链接
+
+* [Stream Mode 协议文档](https://open.dingtalk.com/document/direction/stream-mode-protocol-access-description)
