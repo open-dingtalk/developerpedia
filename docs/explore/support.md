@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
 * 共创群中交流
 * 提交 GitHub issue
 
-<Tabs>
+<Tabs queryString="via">
 <TabItem value="online" label="在线答疑" default>
 
 在[钉钉开发者后台](https://open-dev.dingtalk.com)的右下角中，点击开发小助手悬浮按钮，在弹出的浮层中，点击“在线答疑”：
