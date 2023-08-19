@@ -10,7 +10,7 @@ sidebar_position: 99
 
 当前不支持，敬请期待。
 
-在次之前，你也可以通过[互动卡片（普通版）](https://card.dingtalk.com/card-builder)的更新接口，来实现打字机模式。
+在此之前，你也可以通过[互动卡片（普通版）](https://card.dingtalk.com/card-builder)的更新接口，来实现打字机模式。
 
 备注：[互动卡片（普通版）](https://card.dingtalk.com/card-builder) 有开发文档可以了解详情。
 
