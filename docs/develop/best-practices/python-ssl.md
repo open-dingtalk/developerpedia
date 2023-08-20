@@ -7,7 +7,8 @@ sidebar_position: 2
 Python 报类似一下错误时候可以参考本文档处理：
 
 ```text
-Arguments: (SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)'),)
+Arguments: (SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED]
+certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)'),)
 ```
 
 ## 问题原因
@@ -36,6 +37,6 @@ pip install certifi
 
 如果该问题还有其他的因素需要考虑，也欢迎你[参与贡献](/docs/contrib/overview)完善该文档，帮助更多人解决 Python 环境问题。
 
-## 参考资料：
+## 参考资料
 
 * [StackOverflow: urllib and "SSL: CERTIFICATE_VERIFY_FAILED" Error](https://stackoverflow.com/questions/27835619/urllib-and-ssl-certificate-verify-failed-error)

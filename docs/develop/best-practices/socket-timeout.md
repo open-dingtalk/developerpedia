@@ -5,8 +5,8 @@
 类似的错误信息如下：
 
 ```text
-https://oapi.dingtalk.com/gettoken ... java.net. SocketTimeoutException: connect timed out
-com.taobao.api.ApiException: java.net.SocketTimeoutException: connect timed out
+https://oapi.dingtalk.com/ ... java.net.SocketTimeoutException: connect timedout
+com.taobao.api.ApiException: java.net.SocketTimeoutException: connect timedout
 ```
 
 ## 问题诊断
@@ -38,10 +38,10 @@ flowchart TD
 通过以上网络拓扑，可以知道，如果你的应用访问钉钉统一网关出现网络连接超时，有以下几种可能的原因：
 
 1. 钉钉统一网关服务异常
-2. 区域性甚至是全国的电信运营商网络异常
+2. 区域性甚至是全国性的电信运营商网络异常
 3. 你的应用所在服务器、机房网络异常
 
-针对以上三种可能的原因，分别对应一下诊断方法和解决方案。
+针对以上三种可能的原因，分别对应以下诊断方法和解决方案。
 
 ## 原因一：钉钉统一网关服务异常
 
