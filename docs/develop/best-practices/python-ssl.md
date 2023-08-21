@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Python 报 “SSL: CERTIFICATE_VERIFY_FAILED" 错误
 
-Python 报类似一下错误时候可以参考本文档处理：
+Python 报类似以下错误时候可以参考本文档处理：
 
 ```text
 Arguments: (SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED]
