@@ -137,12 +137,12 @@ Stream 模式的通道上，支持多种类型的消息推送，主要类型如�
 
 服务端推送的请求数据如下：
 
-| 名称 | 类型 | 说明 | 示例                                              |
-|---|---|---|-------------------------------------------------|
-| specVersion | String | 协议版本号 | 1.0                                             |
-| type | String | 推送数据类型 | SYSTEM: 系统数据<br />EVENT：事件推送<br />CALLBACK：回调推送 |
-| headers | Object | 协议元数据，内部包含本次推送的消息ID, 推送数据topic, 数据类型,推送时间等信息 | 详见解析来的header字段描述和示例                             |
-| data | String | 推送数据的 json 字符串 |  ```"{\"suiteTicket\" : \"123df-sdfd\", \"action\": \"suite\"}"```                                               |
+| 名称 | 类型 | 说明                                           | 示例                                                                |
+|---|---|----------------------------------------------|-------------------------------------------------------------------|
+| specVersion | String | 协议版本号                                        | 1.0                                                               |
+| type | String | 推送数据类型，当前支持三种：<br />SYSTEM: 系统数据<br />EVENT：事件推送<br />CALLBACK：回调推送                         | CALLBACK                                                          |
+| headers | Object | 协议元数据，内部包含本次推送的消息ID, 推送数据topic, 数据类型,推送时间等信息 | 详见解下来的 header 字段描述和示例                                             |
+| data | String | 推送数据的 json 字符串                               | ```"{\"suiteTicket\" : \"123df-sdfd\", \"action\": \"suite\"}"``` |
 
 Headers 中必填的字段如下
 
