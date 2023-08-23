@@ -61,3 +61,25 @@ wss-open-connection.dingtalk.com
 
 可以的，用钉钉的机器人发消息接口，参考[文档](https://open.dingtalk.com/document/orgapp/robot-overview)
 
+## 机器人能接收图片吗？
+
+类似问题：机器人能接收语音、视频等富文本内容吗
+
+可以的。
+
+图片在消息中有图片消息和富文本消息两种形态，通过[这篇文档](https://open.dingtalk.com/document/orgapp/receive-message)可以了解机器人能接收的所有消息类型，以及对应的数据结构描述。
+包含图片内容的富文本消息示例：
+```json
+{
+  "richText": [
+    {
+      "text": "@SDK示例"
+    },
+    {
+      "pictureDownloadCode": "1lOlaJWGsEAMhw******EAO",
+      "downloadCode": "mIofN681YE3f*****3madCkipB",
+      "type": "picture"
+    }
+  ]
+}
+```
