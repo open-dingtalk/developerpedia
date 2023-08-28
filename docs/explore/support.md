@@ -51,6 +51,7 @@ import TabItem from '@theme/TabItem';
 | 互动卡片开发者交流群     | 32815007951 | [点击链接查看入群二维码](/img/explore/support/interactive-card-group.png) |                             |
 | 钉钉连接器服务商联谊群    | 35259459 | [点击链接查看入群二维码](/img/explore/support/ipaas-group.png)            | 需要加入“钉钉ISV沟通组”组织            |
 | 智能人事开放群        | 23128045 |                                                                |                             |
+| 统一授权组件接入保障群    | 27520024199 | [点击链接查看入群二维码](/img/explore/support/permision.png)              |                             |
 
 备注：
 1. 如果出现群二维码过期，欢迎通过其他技术支持渠道反馈过期问题；
