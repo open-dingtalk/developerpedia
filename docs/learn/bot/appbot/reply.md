@@ -16,7 +16,7 @@ sidebar_position: 3
 如果存在可用的 Webhook，可以通过[官方文档](https://open.dingtalk.com/document/robots/custom-robot-access/#title-zob-eyu-qse)学习如何发送消息。
 可用的 Webhook 来源有以下几种：
 
-1. 通过创建[群自定义机器人](/docs/learn/bot/webhook)，创建成功后的页面中可以获取到 Webhook url；
+1. 通过创建[群自定义机器人](/docs/learn/bot/webhook/overview)，创建成功后的页面中可以获取到 Webhook url；
 2. 通过机器人接收到消息后，在收取到的消息体 JSON 数据中，可以获得 SessionWebhook url，相关字段说明详见官方文档中的[接收消息](https://open.dingtalk.com/document/orgapp/receive-message)；
 
 :::caution 注意事项
