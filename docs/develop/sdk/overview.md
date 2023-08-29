@@ -10,7 +10,7 @@ sidebar_position: 1
 
 ### Stream 模式 SDK 和示例
 
-钉钉 Stream 模式支持事件订阅、机器人收消息、卡片回调等能力。
+钉钉 [Stream 模式](/docs/learn/stream/overview)支持事件订阅、机器人收消息、卡片回调等能力。
 
 * Java（示例，而不是SDK）：https://github.com/open-dingtalk/dingtalk-stream-sdk-java-quick-start
 * Node.js（SDK+示例）：https://github.com/open-dingtalk/dingtalk-stream-sdk-nodejs
