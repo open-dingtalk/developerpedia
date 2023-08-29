@@ -40,6 +40,14 @@ sidebar_position: 3
 
 可以的。如果采用 Stream 模式[接收消息](/docs/learn/bot/appbot/receive)的话，可以参考钉钉开源的 [SDK 及其示例](/docs/develop/sdk/overview)。通过示例快速了解如何回复消息。
 
+### 是否可以通过 Stream 通道回复 IM 消息？
+
+其他相关问题：是否可以通过 Stream 模式的 WebSocket 通道实现 IM 消息回复？
+
+不可以。
+
+目前可以通过 Webhook 和 OpenAPI 两种方式回复消息，本文档在前面详细介绍了这两种方式。暂时不可以通过 WebSocket/Stream 通道回复消息。
+
 ## 相关链接
 
 1. [官方文档：自定义机器人接入](https://open.dingtalk.com/document/robots/custom-robot-access/)
