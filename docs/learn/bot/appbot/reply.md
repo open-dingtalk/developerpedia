@@ -8,8 +8,8 @@ sidebar_position: 3
 
 机器人发送消息有多种方式：
 
-1. Webhook
-2. OpenAPI
+1. Webhook，支持简单的文本、Markdown类型消息发送；
+2. OpenAPI，支持上传图片、卡片消息等丰富的消息交互形式；
 
 ## 通过 Webhook 发送消息
 
