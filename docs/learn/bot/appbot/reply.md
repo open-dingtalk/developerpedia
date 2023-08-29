@@ -29,14 +29,16 @@ sidebar_position: 3
 
 简单消息的发送步骤如下：
 
-1. 获取应用的访问凭据（AccessToken），参考[官方文档：获取访问凭证](https://open.dingtalk.com/document/orgapp/obtain-the-access_token-of-an-internal-app)
+1. 获取应用的访问凭据（AccessToken），参考[官方文档：获取访问凭证](https://open.dingtalk.com/document/orgapp/obtain-the-access_token-of-an-internal-app)；
 2. 调用消息发送 API 实现发送消息能力，参考[官方文档：机器人概述](https://open.dingtalk.com/document/orgapp/robot-overview)中的“消息发送”部分；
 
 如果文本和 Markdown 类型不能满足需求，可以发送具备丰富交互能力的互动卡片消息。详见[互动卡片相关文档](/docs/learn/card/intro)。
 
 ## 常见问题
 
+### 有没有相关示例可以学习一下？
 
+可以的。如果采用 Stream 模式[接收消息](/docs/learn/bot/appbot/receive)的话，可以参考钉钉开源的 [SDK 及其示例](/docs/develop/sdk/overview)。通过示例快速了解如何回复消息。
 
 ## 相关链接
 
