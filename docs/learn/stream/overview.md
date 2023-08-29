@@ -4,7 +4,9 @@ sidebar_position: 1
 
 # 概述
 
-钉钉与开发者的应用的服务端之间有两种方向调用
+*钉钉平台与开发者应用之间有多种形式的数据交互，钉钉在2023年全新推出来的 Stream Mode 可以极大的减轻应用开发和运维的负担，值得学习和使用。本文为 Stream Mode 提供一个概述性的介绍，让开发者对 Stream Mode 有个初步了解。*
+
+钉钉与开发者的应用的服务端之间有两种方向调用：
 
 1. **开发者应用调用钉钉**，通过 REST API 方式。例如：通过部门 ID 查询成员列表，通过用户 ID 查询日程忙闲
 2. **钉钉调用开发者应用**，通过 Webhook 或者 Stream 模式。例如[事件订阅](https://open.dingtalk.com/document/orgapp/stream)、[机器人收消息](https://open.dingtalk.com/document/orgapp/the-creation-and-installation-of-the-application-robot-in-the)、[卡片回调](https://open.dingtalk.com/document/orgapp/create-and-deliver-cards)等
