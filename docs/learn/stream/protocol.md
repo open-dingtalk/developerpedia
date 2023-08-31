@@ -99,7 +99,7 @@ Host: wss-open-connection.dingtalk.com
 Upgrade: websocket
 ```
 
-:::caution
+:::caution 注意事项
 以上示例中 Host、Path 信息仅用于示例展示，请用步骤一中返回的 endpoint 信息作为 Host 和 Path 构建 WebSocket 请求。
 :::
 

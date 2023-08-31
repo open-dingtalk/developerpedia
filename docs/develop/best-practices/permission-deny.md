@@ -72,7 +72,7 @@ sidebar_position: 1
 6. 接口的 RequestID
 
 
-:::caution
+:::caution 注意事项
 
 为了保护的你应用安全，以及使用你应用的客户信息安全，请不要在问题反馈中携带隐私信息。例如 ClientSecret、用户AT聊天机器人的消息内容等。
 

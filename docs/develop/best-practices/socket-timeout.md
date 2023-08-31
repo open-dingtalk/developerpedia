@@ -96,7 +96,7 @@ flowchart TD
 2. 通过 ping 命令诊断网络联通性，例如 `ping api.dingtalk.com`
 4. 通过 traceroute 命令诊断网络链路，例如 `traceroute api.dingtalk.com`
 
-:::caution
+:::caution 注意事项
 1. 将以上命令中的域名更换为系统错误日志中出现异常的服务域名，例如 api.dingtalk.com，oapi.dingtalk.com 或其他日志中打印的域名；
 2. 务必在出现网络异常的应用服务器上执行，而不是在你本机的笔记本电脑上；
 3. Windows 上，请将 traceroute 更换为 tracert
