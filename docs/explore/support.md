@@ -52,6 +52,7 @@ import TabItem from '@theme/TabItem';
 | 钉钉连接器服务商联谊群    | 35259459 | [点击链接查看入群二维码](/img/explore/support/ipaas-group.png)           | 需要加入“钉钉ISV沟通组”组织            |
 | 智能人事开放群        | 23128045 |                                                               |                             |
 | 统一授权组件接入保障群    | 27520024199 | [点击链接查看入群二维码](/img/explore/support/permission.png)            |                             |
+| Mac 钉钉反馈群      | 21947662 | | 钉钉 Mac 版本使用问题交流             |
 
 备注：
 1. 如果出现群二维码过期，欢迎通过其他技术支持渠道反馈过期问题；
