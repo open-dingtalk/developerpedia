@@ -21,7 +21,7 @@ sidebar_position: 99
 
 你也可以在这里找到一个 Python 的使用示例：https://github.com/chzealot/dingtalk-stable-diffusion
 
-## 是否支持 C#、PHP？
+## 是否支持 .NET、PHP？
 
 当前官方 SDK 支持 Java、Python、Node.js、Golang，其他针对其他语言我们提供了协议文档，便于开发者自行实现。
 

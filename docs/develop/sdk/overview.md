@@ -19,7 +19,7 @@ sidebar_position: 1
 
 更多语言 SDK 欢迎社区参与贡献，将在此页面中予以推荐展示，目前测试验证通过的生态 SDK 如下：
 
-* C# （SDK+示例）：[Yancy1028/Jusoft.DingtalkStream](https://github.com/Yancy1028/Jusoft.DingtalkStream)，感谢[@Yancy1028](https://github.com/Yancy1028)贡献。 
+* .NET （SDK+示例）：[Yancy1028/Jusoft.DingtalkStream](https://github.com/Yancy1028/Jusoft.DingtalkStream)，感谢[@Yancy1028](https://github.com/Yancy1028)贡献。 
 
 开发时候，可以参考[Stream Mode 协议文档](https://open.dingtalk.com/document/direction/stream-mode-protocol-access-description)，或者以上其他语言的 SDK，过程中有问题也可以通过[技术支持](/docs/explore/support)提交反馈和问题交流。
 
