@@ -34,6 +34,13 @@ sidebar_position: 1
 
 更多开源项目参考：https://github.com/weir-cloud/awesome-dingtalk
 
+## SDK 常见问题
+
+### 为什么 Stream SDK 中没有互动卡片高级版的方法？
+
+通过本文档可以知道，钉钉目前开放了 Stream SDK 和 OpenAPI SDK。Stream SDK 仅提供 Stream 模式的推送事件订阅能力，为了方便开发者，在 Stream SDK 里也封装了一部分常用的 OpenAPI 调用。
+但是为了避免两个 SDK 关系混乱，完整的 API 调用方法仅在 OpenAPI SDK 中提供，而不会将大量的 API 方法在两个 SDK 中都提供出来。如果需要访问互动卡片高级版、通讯录、考勤、审批等方法，请使用 OpenAPI SDK。
+
 ## 相关链接
 
 * [Stream Mode 协议文档](https://open.dingtalk.com/document/direction/stream-mode-protocol-access-description)
