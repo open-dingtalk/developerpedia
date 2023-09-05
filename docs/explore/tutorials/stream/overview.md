@@ -14,9 +14,9 @@ sidebar_position: 1
 * 接收聊天会话中的消息内容，包括单聊和群聊。备注：群聊仅限 AT 机器人的消息。
 * 回复消息，或者主动发送消息到聊天会话中
 
-| 教程 | GitHub 代码仓库 |
-|----|---|
-| Go |  | 
+| 教程                                                    | GitHub 代码仓库 |
+|-------------------------------------------------------|---|
+| [Go](/docs/explore/tutorials/stream/bot/golang/intro) | https://github.com/open-dingtalk/stream-tutorial-go | 
 
 ## 进一步学习
 
