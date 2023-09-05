@@ -12,17 +12,17 @@ sidebar_position: 1
 
 本文重点介绍两种消息卡片
 
-1. 消息卡片普通版：开发简单，满足基本的交互需求
-2. 消息卡片高级版：开发过程需要的信息更多，可以满足更丰富的交互需求
+1. 互动卡片普通版：开发简单，满足基本的交互需求
+2. 互动卡片高级版：开发过程需要的信息更多，可以满足更丰富的交互需求
 
-## 消息卡片普通版
+## 互动卡片普通版
 
 * 搭建平台：https://card.dingtalk.com/card-builder
 * 开发文档：
   * 发送消息：https://open.dingtalk.com/document/orgapp/robots-send-interactive-cards
   * 更新消息/卡片（可以通过更新实现打字机效果）：https://open.dingtalk.com/document/orgapp/update-the-robot-to-send-interactive-cards
 
-## 消息卡片高级版
+## 互动卡片高级版
 
 * 搭建平台：https://open.dingtalk.com/document/orgapp/quick-start-2
 * 开放文档：
@@ -34,7 +34,7 @@ sidebar_position: 1
 
 :::info
 
-“消息卡片高级版”支持将卡片投放到IM会话、协作、文档等场域，因此术语上采用了“投放”而不是”发送“。当卡片投放到IM会话时，相当于发送消息卡片到IM会话。
+“互动卡片高级版”支持将卡片投放到IM会话、协作、文档等场域，因此术语上采用了“投放”而不是”发送“。当卡片投放到IM会话时，相当于发送消息卡片到IM会话。
 
 :::
 
@@ -53,11 +53,11 @@ sidebar_position: 1
 * [官方 API 文档：创建卡片（支持选择 HTTP 和 Stream 模式回调）](https://open.dingtalk.com/document/orgapp/interface-for-creating-a-card-instance)
 * [官方 API 文档：创建并投放卡片（支持选择 HTTP 和 Stream 模式回调）](https://open.dingtalk.com/document/orgapp/create-and-deliver-cards)
 
-### 消息卡片普通版是否支持 Stream 模式回调？
+### 互动卡片普通版是否支持 Stream 模式回调？
 
-暂不支持，请用 HTTP 模式或者改用消息卡片高级版。 如果有非常强烈的 Stream 需求，可以通过[技术支持](/docs/explore/support)提交反馈。
+暂不支持，请用 HTTP 模式或者改用互动卡片高级版。 如果有非常强烈的 Stream 需求，可以通过[技术支持](/docs/explore/support)提交反馈。
 
-### 为什么消息卡片高级版的 API 文档中，没有找到设置 Stream 模式的 callbackType 参数？
+### 为什么互动卡片高级版的 API 文档中，没有找到设置 Stream 模式的 callbackType 参数？
 
 钉钉 API 有过一次重大升级，更多的新功能只在新版本 API 中提供。本文档给出的 API 都是新版本，以本文档中新版本文档为准。
 参考：[新旧版本区别](https://open.dingtalk.com/document/orgapp/differences-between-server-apis-and-new-server-apis)。

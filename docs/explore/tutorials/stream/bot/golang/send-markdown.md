@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # 6. 进阶：发送 Markdown
 
-在本章节中，将会介绍如何回复/发送 Markdown 消息。
+在本章节中，将会介绍如何回复/发送 Markdown 消息。相比前面介绍的发送文本消息来说，Markdown 消息支持更丰富的图文混排能力，以及富文本交互，可以用于各种场景中展示业务信息。
 
 本教程的完整代码可以在 [GitHub 仓库](https://github.com/open-dingtalk/stream-tutorial-go)中获取。
 

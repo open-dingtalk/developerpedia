@@ -302,12 +302,18 @@ go run echo_streaming.go --client_id="your-client-id" --client_secret="your-clie
 
 至此，你已成功完成机器人服务开发和部署。接下来可以体验自己开发的机器人服务了。
 
-
 ## 效果如下
 
 ![打字机模式效果](/img/explore/stream/bot/bot-streaming.gif)
 
+## 最佳实践
+
+1. 本文代码中，你可能会对`messageCardTemplate`对应的卡片 JSON 体存在疑惑，不清楚如何编写这段 JSON 代码。这是卡片消息普通版的 JSON 内容，可以通过[搭建平台](https://card.dingtalk.com/card-builder)可视化拖拽生成；
+2. 你也可以不使用更新卡片接口，只用发送卡片接口。通过发送交互式卡片，展示比 Markdown 消息更丰富的互动体验；
+3. 本文仅介绍了**互动卡片普通版**，如果需要更灵活的交互体验，可以通过[互动卡片相关技术文档汇总](/docs/learn/card/intro)了解如何使用**互动卡片高级版**。
+
 ## 相关链接
 
-* [互动卡片相关技术文档汇总](/docs/learn/card/intro)；
-* [另外一个示例：dingtalk-stable-diffusion](https://github.com/chzealot/dingtalk-stable-diffusion)，也通过相同方式实现了打字机模式，同样可以参考借鉴。
+* [互动卡片相关技术文档汇总](/docs/learn/card/intro)
+* [互动卡片普通版-搭建平台](https://card.dingtalk.com/card-builder)
+* [另外一个示例：dingtalk-stable-diffusion](https://github.com/chzealot/dingtalk-stable-diffusion)，也通过相同方式实现了打字机模式，同样可以参考借鉴
