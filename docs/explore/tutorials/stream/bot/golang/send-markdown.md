@@ -1,19 +1,19 @@
 ---
-sidebar_position: 3
+sidebar_position: 6
 ---
 
-# 3. 开发机器人服务
+# 6. 进阶：发送 Markdown
 
-在本章节中，将会介绍如何用 Go 开发一个聊天机器人服务，实现基本的介绍和发送消息能力。
+在本章节中，将会介绍如何回复/发送 Markdown 消息。
 
 本教程的完整代码可以在 [GitHub 仓库](https://github.com/open-dingtalk/stream-tutorial-go)中获取。
 
 ## 创建 Go 模块
 
 ```shell
-mkdir bot_echo_text
-cd bot_echo_text
-go mod init bot_echo_text
+mkdir bot_echo_markdown
+cd bot_echo_markdown
+go mod init bot_echo_markdown
 ```
 
 ## 安装依赖
@@ -24,9 +24,9 @@ go get github.com/open-dingtalk/dingtalk-stream-sdk-go
 
 ## 开发机器人服务
 
-在 go.mod 相同的目录下，创建 `echo_text.go` 文件，文件内容如下：
+在 go.mod 相同的目录下，创建 `echo_markdown.go` 文件，文件内容如下：
 
-```go title="echo_text.go" showLineNumbers
+```go title="echo_markdown.go" showLineNumbers
 package main
 
 import (
@@ -40,10 +40,12 @@ import (
 )
 
 func OnChatBotMessageReceived(ctx context.Context, data *chatbot.BotCallbackDataModel) ([]byte, error) {
-	replyMsg := []byte(fmt.Sprintf("echo received message: [%s]", strings.TrimSpace(data.Text.Content)))
-
+	replyMsg := "echo received message:\n"
+	for _, line := range strings.Split(data.Text.Content, "\n") {
+		replyMsg += fmt.Sprintf("\n> 1. %s", strings.TrimSpace(line))
+	}
 	replier := chatbot.NewChatbotReplier()
-	if err := replier.SimpleReplyText(ctx, data.SessionWebhook, replyMsg); err != nil {
+	if err := replier.SimpleReplyMarkdown(ctx, data.SessionWebhook, []byte("stream-tutorial-go"), []byte(replyMsg)); err != nil {
 		return nil, err
 	}
 	return []byte(""), nil
@@ -54,9 +56,6 @@ func main() {
 	flag.StringVar(&clientId, "client_id", "", "your-client-id")
 	flag.StringVar(&clientSecret, "client_secret", "", "your-client-secret")
 	flag.Parse()
-	if len(clientId) == 0 || len(clientSecret) == 0 {
-		panic("command line options --client_id and --client_secret required")
-	}
 
 	logger.SetLogger(logger.NewStdTestLogger())
 
@@ -78,7 +77,7 @@ func main() {
 1. 通过命令行参数读取 Client ID 和 Client Secret 选项
 2. 通过 Client ID 和 Client Secret 创建 Stream Client
 3. 在 Stream Client 中注册机器人消息回调方法，实现消息接收能力
-4. 在消息回调方法中，简单 echo 机器人消息回去，实现消息发送(回复)能力
+4. 在消息回调方法中，简单 echo 机器人消息回去，采用 Markdown 类型，实现消息发送(回复)能力。相比文本消息，Markdown 支持更丰富的消息样式。
 
 ## 运行机器人服务
 
@@ -87,7 +86,7 @@ func main() {
 
 ```shell
 go mod tidy
-go run echo_text.go --client_id="your-client-id" --client_secret="your-client-secret"
+go run echo_markdown.go --client_id="your-client-id" --client_secret="your-client-secret"
 ```
 
 :::caution 注意事项
@@ -95,6 +94,11 @@ go run echo_text.go --client_id="your-client-id" --client_secret="your-client-se
 :::
 
 至此，你已成功完成机器人服务开发和部署。接下来可以体验自己开发的机器人服务了。
+
+
+## 效果如下
+
+![发送 Markdown 消息](/img/explore/stream/bot/send-markdown.png)
 
 ## 相关链接
 
