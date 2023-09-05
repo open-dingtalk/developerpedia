@@ -20,7 +20,9 @@ import TabItem from '@theme/TabItem';
 <Tabs queryString="via">
 <TabItem value="grant" label="管理员授予权限（推荐）" default>
 
-1. 进入 [OA 管理后台](https://oa.dingtalk.com)；
+由主管理员操作（企业里可以由多个主管理员，在 OA 管理后台可以添加主管理员）。
+
+1. 主管理员进入 [OA 管理后台](https://oa.dingtalk.com)；
 2. 左侧导航中选择 “安全与权限” - “权限管理”；
 3. 按照下图依次操作：选择员工、点击“钉钉官方应用权限”的“配置”、勾选权限、保存；
 4. 恭喜完成授权。
