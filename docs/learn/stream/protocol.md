@@ -399,6 +399,6 @@ disconnect 请求中当前仅包含 reason 字段，描述连接断开的原因�
 
 * [Stream Mode SDK](/docs/develop/sdk/overview)
 * [官方文档：Stream Mode 协议文档](https://open.dingtalk.com/document/direction/stream-mode-protocol-access-description)
-* [官方文档：服务端 Stream 模式介绍](https://open.dingtalk.com/document/resourcedownload/Introduction-to-stream-mode)
+* [官方文档：服务端 Stream 模式介绍](https://open.dingtalk.com/document/resourcedownload/introduction-to-stream-mode)
 * [官方文档：接收机器人消息的描述文档](https://open.dingtalk.com/document/orgapp/receive-message)
 

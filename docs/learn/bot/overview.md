@@ -24,7 +24,7 @@ import TabItem from '@theme/TabItem';
 
 1. 完整的收发消息能力，既能发送消息，也能接收消息
 2. 支持单聊和群聊
-3. 支持 [Stream Mode](https://open.dingtalk.com/document/resourcedownload/Introduction-to-stream-mode)，开发过程极其简单
+3. 支持 [Stream Mode](https://open.dingtalk.com/document/resourcedownload/introduction-to-stream-mode)，开发过程极其简单
 4. 支持以应用身份调用全部的 OpenAPI，例如调用上传图片文件到钉钉平台，获得MediaID后用于Markdown消息中图片展示（钉钉markdown消息中，支持在图片url地方填写MediaID）
 5. 支持发送[互动卡片消息](https://open.dingtalk.com/document/orgapp/overview-card)，更丰富的消息交互能力
 

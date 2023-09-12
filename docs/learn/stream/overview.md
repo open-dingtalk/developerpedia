@@ -40,4 +40,4 @@ sidebar_position: 1
 
 * [Stream Mode SDK](/docs/develop/sdk/overview)
 * [官方文档：Stream Mode 协议文档](https://open.dingtalk.com/document/direction/stream-mode-protocol-access-description)
-* [官方文档：服务端 Stream 模式介绍](https://open.dingtalk.com/document/resourcedownload/Introduction-to-stream-mode)
+* [官方文档：服务端 Stream 模式介绍](https://open.dingtalk.com/document/resourcedownload/introduction-to-stream-mode)

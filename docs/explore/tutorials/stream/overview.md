@@ -24,4 +24,4 @@ sidebar_position: 1
 
 ## 相关链接
 
-* [钉钉：服务端 Stream 模式](https://open.dingtalk.com/document/resourcedownload/Introduction-to-stream-mode)
+* [钉钉：服务端 Stream 模式](https://open.dingtalk.com/document/resourcedownload/introduction-to-stream-mode)
