@@ -58,7 +58,7 @@ card.callback.topic=/v1.0/card/instances/callback
 ai.plugin.topic=/v1.0/agi/plugins/callback
 
 ```
-AI插件的通道标识为`/v1.0/agi/plugins/callback`
+AI 插件的通道标识为`/v1.0/agi/plugins/callback`
 
 将钉钉开放平台中应用的标识填入`<your-app-key>`和`<your-app-secret>`区域
 
