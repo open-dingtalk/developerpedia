@@ -18,4 +18,4 @@ sidebar_position: 1
 ## 准备工作
 
 1. 钉钉账号，获得开发者权限。关于开发者权限，你可以通过[这篇文章](/docs/explore/portal/grant-admin)获得相关操作指南；
-2. java开发环境；
+2. Java开发环境；

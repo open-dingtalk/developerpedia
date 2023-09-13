@@ -62,7 +62,7 @@ AGI插件的通道标识为`/v1.0/agi/plugins/callback`
 
 将钉钉开放平台中应用的标识填入`<your-app-key>`和`<your-app-secret>`区域
 
-:::tips
+:::tip 关于应用唯一标识
 企业内部应用为`appKey`和`appSecret`,企业三方应用为`suiteKey`和`suiteSecret`。
 :::
 

@@ -1,7 +1,7 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 ---
 
-# 5. 使用AI插件搭建AI技能
+# 4. 使用AI插件搭建AI技能
 
 coomming soon ...

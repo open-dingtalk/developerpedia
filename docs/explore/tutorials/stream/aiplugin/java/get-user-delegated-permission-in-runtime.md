@@ -1,8 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 6
 ---
 
-# 4. 进阶：获取用户代理凭证
+# 6. 进阶：获取用户代理凭证
 在本章节，将会介绍如何在获取[用户代理凭证](https://open.dingtalk.com)访问钉钉[GraphAPI](https://open.dingtalk.com)。包括以下内容：
 1. 什么是用户代理凭证
 2. 用户代理凭证如何访问钉钉GraphAPI
@@ -40,17 +40,17 @@ public class AGIPluginCallbackConsumer implements OpenDingTalkCallbackListener<D
 }
   // 输入
   {
-  "abilityKey":"addCustomer",
-  "data":{
-    "owner":"010912691086509",
-    "ambition":"低",
-    "customName":"杭州钉钉网络有限公司",
-    "accessToken":"c4b3ecd60a1a308abc6b7fc6f0332d84" //用户代理凭证, 注意与企业访问的区别
-  },
-  "pluginId":"AGI-xxxx-yyy-zzz-www-hhhhhh",
-  "pluginVersion":"1.0.0",
-  "requestId":"39a47658-5800-41ba-bfed-21a9573e470f"
-}
+    "abilityKey":"addCustomer",
+    "data":{
+        "owner":"010912691086509",
+        "ambition":"低",
+        "customName":"杭州钉钉网络有限公司",
+        "accessToken":"c4b3ecd60a1a308abc6b7fc6f0332d84" //用户代理凭证, 注意与企业访问的区别
+    },
+    "pluginId":"AGI-xxxx-yyy-zzz-www-hhhhhh",
+    "pluginVersion":"1.0.0",
+    "requestId":"39a47658-5800-41ba-bfed-21a9573e470f"
+  }
 ```
   
   
@@ -77,6 +77,9 @@ public class AGIPluginCallbackConsumer implements OpenDingTalkCallbackListener<D
   "requestId":"39a47658-5800-41ba-bfed-21a9573e470f"
 }
 ```
+
+### 用户代理凭证授权效果
+![用户代理凭证授权](/img/explore/stream/aiplugin/consent.png)
 
 ## 进阶：AI插件服务如何获取用户代理凭证
 AIPaaS的访问原则是以[操作人的权限](https://open.dingtalk.com/document/orgapp/obtain-user-token)访问数据，即AI应用通过代理操作人用户身份访问开放平台中的me接口（e.g 待办,日程，个人状态 etc）
