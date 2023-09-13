@@ -26,13 +26,13 @@ AIPaaS中访问数据的原则是以操作人的权限访问数据，即AI应用
 :::
 
 ```java
-public class AGIPluginCallbackConsumer implements OpenDingTalkCallbackListener<DingTalkAGIPluginRequest, DingTalkAGIPluginResponse> {
+public class AIPluginCallbackConsumer implements OpenDingTalkCallbackListener<DingTalkAIPluginRequest, DingTalkAIPluginResponse> {
     @Override
-    public DingTalkAGIPluginResponse execute(DingTalkAGIPluginRequest request) {
-        log.info("receive AGI plugin request={}", JSON.toJSONString(request));
+    public DingTalkAIPluginResponse execute(DingTalkAIPluginRequest request) {
+        log.info("receive AI plugin request={}", request);
         String abilityKey = request.getAbilityKey();
         // dos something with abilityKey
-        DingTalkAGIPluginResponse  response = new DingTalkAGIPluginResponse();
+        DingTalkAIPluginResponse response = new DingTalkAIPluginResponse();
         response.setRequestId(request.getRequestId());
         response.setResult("echo");
         return response;
@@ -47,7 +47,7 @@ public class AGIPluginCallbackConsumer implements OpenDingTalkCallbackListener<D
         "customName":"杭州钉钉网络有限公司",
         "accessToken":"c4b3ecd60a1a308abc6b7fc6f0332d84" //用户代理凭证, 注意与企业访问的区别
     },
-    "pluginId":"AGI-xxxx-yyy-zzz-www-hhhhhh",
+    "pluginId":"AI-xxxx-yyy-zzz-www-hhhhhh",
     "pluginVersion":"1.0.0",
     "requestId":"39a47658-5800-41ba-bfed-21a9573e470f"
   }
@@ -59,13 +59,13 @@ public class AGIPluginCallbackConsumer implements OpenDingTalkCallbackListener<D
 
 ### 授权行动点
 :::info 
-本章节只涉及用户代理凭证的授权卡片行动点接入方式，当前AGI插件暂时不支持企业凭证的增量授权
+本章节只涉及用户代理凭证的授权卡片行动点接入方式，当前AI插件暂时不支持企业凭证的增量授权
 :::
 
 #### 平台主动触发
 当官方插件中使用了开放平台接口me接口没有授权或需要续期时，baymax会主动发出授权卡片，授权之后继续重新执行技能
 #### AI插件服务端触发
-当AGI插件服务端访问开放平台me接口没有授权或需要续期时，需要通过特定的结构体透传开放平台错误码告知baymax弹出授权卡片，授权之后继续重新执行技能
+当AI插件服务端访问开放平台me接口没有授权或需要续期时，需要通过特定的结构体透传开放平台错误码告知baymax弹出授权卡片，授权之后继续重新执行技能
 当前与授权相关错误码主要有两个：
 ‒ 400：InvalidAuthentication；access_token过期或者不存在，需要重新获取
 ‒ 403：Forbidden.AccessDenied.AccessTokenPermissionDenied；需要申请下接口权限，请参考添加接口调用权限。
@@ -84,7 +84,7 @@ public class AGIPluginCallbackConsumer implements OpenDingTalkCallbackListener<D
 ## 进阶：AI插件服务如何获取用户代理凭证
 AIPaaS的访问原则是以[操作人的权限](https://open.dingtalk.com/document/orgapp/obtain-user-token)访问数据，即AI应用通过代理操作人用户身份访问开放平台中的me接口（e.g 待办,日程，个人状态 etc）
 
-用户可以通过在AGI插件中选择是否需要token,并在回调的`data`对象中获取`accessToken`
+用户可以通过在AI插件中选择是否需要token,并在回调的`data`对象中获取`accessToken`
 
 ```json
   {
@@ -95,7 +95,7 @@ AIPaaS的访问原则是以[操作人的权限](https://open.dingtalk.com/docume
     "customName":"杭州钉钉网络有限公司",
     "accessToken":"c4b3ecd60a1a308abc6b7fc6f0332d84" //用户代理凭证, 注意与企业访问的区别
   },
-  "pluginId":"AGI-xxxx-yyy-zzz-www-hhhhhh",
+  "pluginId":"AI-xxxx-yyy-zzz-www-hhhhhh",
   "pluginVersion":"1.0.0",
   "requestId":"39a47658-5800-41ba-bfed-21a9573e470f"
 }

@@ -15,21 +15,21 @@ sidebar_position: 2
 
 
 ## 搭建AI插件处理逻辑
-```java title="AGIPluginCallbackConsumer.java" showLineNumbers
-public class AGIPluginCallbackConsumer implements OpenDingTalkCallbackListener<DingTalkAGIPluginRequest, DingTalkAGIPluginResponse> {
+```java title="AIPluginCallbackConsumer.java" showLineNumbers
+public class AIPluginCallbackConsumer implements OpenDingTalkCallbackListener<DingTalkAIPluginRequest, DingTalkAIPluginResponse> {
     @Override
-    public DingTalkAGIPluginResponse execute(DingTalkAGIPluginRequest request) {
-        log.info("receive AGI plugin request={}", request);
+    public DingTalkAIPluginResponse execute(DingTalkAIPluginRequest request) {
+        log.info("receive AI plugin request={}", request);
         String abilityKey = request.getAbilityKey();
         // dos something with abilityKey
-        DingTalkAGIPluginResponse  response = new DingTalkAGIPluginResponse();
+        DingTalkAIPluginResponse response = new DingTalkAIPluginResponse();
         response.setRequestId(request.getRequestId());
         response.setResult("echo");
         return response;
     }
 }
 ```
-其中`DingTalkAGIPluginRequest`和`DingTalkAGIPluginResponse` 为平台约定的回调协议对象,详见[GitHub 仓库](https://github.com/open-dingtalk/dingtalk-stream-sdk-java-quick-start/tree/main/src/main/java/org/example/model)
+其中`DingTalkAIPluginRequest`和`DingTalkAIPluginResponse` 为平台约定的回调协议对象,详见[GitHub 仓库](https://github.com/open-dingtalk/dingtalk-stream-sdk-java-quick-start/tree/main/src/main/java/org/example/model)
 
 :::info 提示信息
 `abilityKey` 可以作为服务的唯一标识做路由。
@@ -54,11 +54,11 @@ robot.msg.topic=/v1.0/im/bot/messages/get
 # see more info from https://open.dingtalk.com/document/orgapp/event-callback-card
 card.callback.topic=/v1.0/card/instances/callback
 
-# constants of AGI plugin topic, don't edit
-agi.plugin.topic=/v1.0/agi/plugins/callback
+# constants of AI plugin topic, don't edit
+ai.plugin.topic=/v1.0/agi/plugins/callback
 
 ```
-AGI插件的通道标识为`/v1.0/agi/plugins/callback`
+AI插件的通道标识为`/v1.0/agi/plugins/callback`
 
 将钉钉开放平台中应用的标识填入`<your-app-key>`和`<your-app-secret>`区域
 
@@ -75,13 +75,13 @@ public class StreamCallbackListener {
     @Value("${app.appSecret}")
     private String appSecret;
 
-    @Value("${agi.plugin.topic}")
-    private String agiPluginTopic;
+    @Value("${ai.plugin.topic}")
+    private String aiPluginTopic;
 
-    private AGIPluginCallbackConsumer agiPluginCallbackConsumer;
+    private AIPluginCallbackConsumer aiPluginCallbackConsumer;
 
-    public StreamCallbackListener(@Autowired AGIPluginCallbackConsumer agiPluginCallbackConsumer) {
-        this.agiPluginCallbackConsumer = agiPluginCallbackConsumer;
+    public StreamCallbackListener(@Autowired AIPluginCallbackConsumer aiPluginCallbackConsumer) {
+        this.aiPluginCallbackConsumer = aiPluginCallbackConsumer;
     }
 
     @PostConstruct
@@ -90,7 +90,7 @@ public class StreamCallbackListener {
         OpenDingTalkClient client = OpenDingTalkStreamClientBuilder
                 .custom()
                 .credential(new AuthClientCredential(appKey, appSecret))
-                .registerCallbackListener(agiPluginTopic, agiPluginCallbackConsumer)
+                .registerCallbackListener(aiPluginTopic, aiPluginCallbackConsumer)
                 .build();
         client.start();
     }
