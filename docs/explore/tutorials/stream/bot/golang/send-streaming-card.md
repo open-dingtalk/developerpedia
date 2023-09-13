@@ -6,7 +6,7 @@ sidebar_position: 7
 
 在本章节中，将会学习如何通过发送和更新互动卡片（普通版）来实现打字机模式。
 
-本教程的完整代码可以在 [GitHub 仓库](https://github.com/open-dingtalk/stream-tutorial-go)中获取，本章节涉及的代码量较大，建议通过 GitHub 查看。
+本教程的完整代码可以在 [GitHub 仓库](https://github.com/open-dingtalk/dingtalk-tutorial-go)中获取，本章节涉及的代码量较大，建议通过 GitHub 查看。
 
 ## 创建 Go 模块
 

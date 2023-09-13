@@ -2,19 +2,19 @@
 sidebar_position: 2
 ---
 
-# 2. 搭建AI插件服务
+# 2. 搭建 AI 插件服务
 
-在本章节，将会介绍如何在使用钉钉开放平台[Stream mode](https://open-dingtalk.github.io/developerpedia/docs/learn/stream/overview)搭建AI插件服务。包括以下内容：
-1. 搭建AI插件处理逻辑
+在本章节，将会介绍如何在使用钉钉开放平台[Stream mode](https://open-dingtalk.github.io/developerpedia/docs/learn/stream/overview)搭建 AI 插件服务。包括以下内容：
+1. 搭建 AI 插件处理逻辑
 2. 填充应用信息
-3. 注册AI插件回调通道
+3. 注册 AI 插件回调通道
 
 :::info 提示信息
 本教程的完整代码可以在 [GitHub 仓库](https://github.com/open-dingtalk/dingtalk-stream-sdk-java-quick-start)中获取，本章节涉及的代码量较大，建议通过 GitHub 查看。
 :::
 
 
-## 搭建AI插件处理逻辑
+## 搭建 AI 插件处理逻辑
 ```java title="AIPluginCallbackConsumer.java" showLineNumbers
 public class AIPluginCallbackConsumer implements OpenDingTalkCallbackListener<DingTalkAIPluginRequest, DingTalkAIPluginResponse> {
     @Override
@@ -66,7 +66,7 @@ AI插件的通道标识为`/v1.0/agi/plugins/callback`
 企业内部应用为`appKey`和`appSecret`,企业三方应用为`suiteKey`和`suiteSecret`。
 :::
 
-## 注册AI插件回调通道
+## 注册 AI 插件回调通道
 ```java title="StreamCallbackListener.java" showLineNumbers
 public class StreamCallbackListener {
     @Value("${app.appKey}")
