@@ -16,7 +16,7 @@ sidebar_position: 1
 
 | 教程                                                    | GitHub 代码仓库 |
 |-------------------------------------------------------|---|
-| [Go](/docs/explore/tutorials/stream/bot/golang/intro) | https://github.com/open-dingtalk/stream-tutorial-go | 
+| [Go](/docs/explore/tutorials/stream/bot/golang/intro) | https://github.com/open-dingtalk/dingtalk-tutorial-go | 
 
 ## 进一步学习
 

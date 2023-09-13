@@ -6,7 +6,7 @@ sidebar_position: 3
 
 在本章节中，将会介绍如何用 Go 开发一个聊天机器人服务，实现基本的介绍和发送消息能力。
 
-本教程的完整代码可以在 [GitHub 仓库](https://github.com/open-dingtalk/stream-tutorial-go)中获取。
+本教程的完整代码可以在 [GitHub 仓库](https://github.com/open-dingtalk/dingtalk-tutorial-go)中获取。
 
 ## 创建 Go 模块
 
@@ -98,4 +98,4 @@ go run echo_text.go --client_id="your-client-id" --client_secret="your-client-se
 
 ## 相关链接
 
-* [GitHub 上示例代码](https://github.com/open-dingtalk/stream-tutorial-go)
+* [GitHub 上示例代码](https://github.com/open-dingtalk/dingtalk-tutorial-go)
