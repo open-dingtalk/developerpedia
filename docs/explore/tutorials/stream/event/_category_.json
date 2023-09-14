@@ -1,6 +1,6 @@
 {
-  "label": "AI 插件",
-  "position": 4,
+  "label": "事件订阅",
+  "position": 3,
   "link": {
     "type": "generated-index"
   }

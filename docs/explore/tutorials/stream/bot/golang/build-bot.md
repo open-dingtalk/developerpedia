@@ -91,7 +91,7 @@ go run echo_text.go --client_id="your-client-id" --client_secret="your-client-se
 ```
 
 :::caution 注意事项
-务必将以上命令中"your-client-id"和"your-client-secret"替换成实际的值后再运行，否则无法成功建立连接。Client ID 和 Client Secret 可以通过[步骤二: 创建机器人应用文档](/docs/explore/tutorials/stream/bot/golang/create-bot)获取。
+务必将以上命令中"your-client-id"和"your-client-secret"替换成实际的值后再运行，否则无法成功建立连接。Client ID 和 Client Secret 可以通过[步骤二: 创建机器人应用文档](create-bot)获取。
 :::
 
 至此，你已成功完成机器人服务开发和部署。接下来可以体验自己开发的机器人服务了。
