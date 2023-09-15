@@ -6,7 +6,7 @@ sidebar_position: 8
 在本章节，将会介绍如何在获取[用户代理凭证](https://open.dingtalk.com)访问钉钉[GraphAPI](https://open.dingtalk.com)。包括以下内容：
 1. 什么是用户代理凭证
 2. 用户代理凭证如何访问钉钉GraphAPI
-3. 在钉钉AIPaaS中如何触发用户授权代理凭证
+3. 在钉钉 AIPaaS 中如何触发用户授权代理凭证
 4. 进阶：AI 插件服务如何获取用户代理凭证
 
 ## 什么是用户代理凭证
@@ -17,9 +17,9 @@ coming soon...
 
 coming soon...
 
-## 在钉钉AIPaaS中如何触发用户授权代理凭证
+## 在钉钉 AIPaaS 中如何触发用户授权代理凭证
 
-AIPaaS的访问原则是以[操作人的权限](https://open.dingtalk.com/document/orgapp/obtain-user-token)访问数据，即 AI 应用通过代理操作人用户身份访问开放平台中的me接口（e.g 待办,日程，个人状态 etc）
+AIPaaS 的访问原则是以[操作人的权限](https://open.dingtalk.com/document/orgapp/obtain-user-token)访问数据，即 AI 应用通过代理操作人用户身份访问开放平台中的me接口（e.g 待办,日程，个人状态 etc）
 
 :::info
 用户可以通过在 AI 插件中选择是否需要token来获取
