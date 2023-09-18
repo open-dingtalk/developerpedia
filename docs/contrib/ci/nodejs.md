@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Node.js SDK 发布
 
-本文介绍如何通过 GitHub Action 自动化发布 dingtalk-stream-sdk-nodejs 这个 SDK。
+本文介绍如何通过 GitHub Action 自动化发布 [dingtalk-stream-sdk-nodejs](https://www.npmjs.com/package/dingtalk-stream-sdk-nodejs) 这个 SDK。
 
 核心思想是通过 GitHub Release 触发 GitHub Action 执行，在 GitHub Action 中实现了自动化构建与发布。
 
@@ -43,6 +43,7 @@ NPM 发布的 Token，采用钉钉开放平台公共账号创建的 Access Token
 
 ## 相关链接
 
+* [npm 上 dingtalk-stream-sdk-nodejs 首页](https://www.npmjs.com/package/dingtalk-stream-sdk-nodejs)
 * [GitHub Actions documentation](https://docs.github.com/en/actions)
 * [Using secrets in GitHub Actions](https://docs.github.com/actions/security-guides/encrypted-secrets)
 * 该项目的构建脚本为：[.github/workflows/publish.yml](https://github.com/open-dingtalk/dingtalk-stream-sdk-nodejs/blob/main/.github/workflows/publish.yml)
