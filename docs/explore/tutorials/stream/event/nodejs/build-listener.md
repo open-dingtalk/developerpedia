@@ -4,103 +4,97 @@ sidebar_position: 3
 
 # 3. 开发事件订阅服务
 
-在本章节中，将会介绍如何用 Go 开发一个事件订阅服务，接收钉钉平台推送的变更通知。
+在本章节中，将会介绍如何用 Node.js 开发一个事件订阅服务，接收钉钉平台推送的变更通知。
 
-本教程的完整代码可以在 [GitHub 仓库](https://github.com/open-dingtalk/dingtalk-tutorial-go)中获取。
+本教程的完整代码可以在 [GitHub 仓库](https://github.com/open-dingtalk/dingtalk-tutorial-nodejs)中获取。
 
-## 创建 Go 模块
+## 创建 Node.js 应用
 
 ```shell
 mkdir event_chat_update
 cd event_chat_update
 npm init -y
-npm install dingtalk-stream-sdk-nodejs commander
-npm install --save-dev typescript ts-node
 ```
 
 ## 安装依赖
 
 ```shell
-go get github.com/open-dingtalk/dingtalk-stream-sdk-go
+npm install dingtalk-stream-sdk-nodejs commander
+npm install --save-dev typescript ts-node
+npm install
 ```
+
+提醒：对于精通 TypeScript 和 JavaScript 的开发者来说，以上依赖项中，仅 dingtalk-stream-sdk-nodejs 是必须的。其他依赖项可以根据实际项目需要决定是否引入。
 
 ## 开发事件订阅服务
 
-在 go.mod 相同的目录下，创建 `event_handler.go` 文件，文件内容如下：
+一、修改 event_chat_update 目录下的 `package.json` 文件：
 
-```go title="event_handler.go" {13-32} showLineNumbers
-package main
+1. 将 index.js 修改为 index.ts
+2. 在 scripts 中添加命令：`"start": "npx ts-node --esm ./index.ts"`
 
-import (
-	"context"
-	"flag"
-	"github.com/open-dingtalk/dingtalk-stream-sdk-go/client"
-	"github.com/open-dingtalk/dingtalk-stream-sdk-go/event"
-	"github.com/open-dingtalk/dingtalk-stream-sdk-go/logger"
-	"github.com/open-dingtalk/dingtalk-stream-sdk-go/payload"
-	"time"
-)
-
-func OnEventReceived(_ context.Context, df *payload.DataFrame) (*payload.DataFrameResponse, error) {
-	eventHeader := event.NewEventHeaderFromDataFrame(df)
-	if eventHeader.EventType != "chat_update_title" {
-		// ignore events not equals `chat_update_title`; 忽略`chat_update_title`之外的其他事件；
-		// 该示例仅演示 chat_update_title 类型的事件订阅；
-		return event.NewSuccessResponse()
-	}
-
-	logger.GetLogger().Infof("received event, delay=%s, eventType=%s, eventId=%s, eventBornTime=%d, eventCorpId=%s, eventUnifiedAppId=%s, data=%s",
-		time.Duration(time.Now().UnixMilli()-eventHeader.EventBornTime)*time.Millisecond,
-		eventHeader.EventType,
-		eventHeader.EventId,
-		eventHeader.EventBornTime,
-		eventHeader.EventCorpId,
-		eventHeader.EventUnifiedAppId,
-		df.Data)
-	// put your code here; 可以在这里添加你的业务代码，处理事件订阅的业务逻辑；
-
-	return event.NewSuccessResponse()
-}
-
-func main() {
-	var clientId, clientSecret string
-	flag.StringVar(&clientId, "client_id", "", "your-client-id, AppKey or SuiteKey")
-	flag.StringVar(&clientSecret, "client_secret", "", "your-client-secret, AppSecret or SuiteSecret")
-	flag.Parse()
-	if len(clientId) == 0 || len(clientSecret) == 0 {
-		panic("command line options --client_id and --client_secret required")
-	}
-
-	logger.SetLogger(logger.NewStdTestLogger())
-
-	cli := client.NewStreamClient(client.WithAppCredential(client.NewAppCredentialConfig(clientId, clientSecret)))
-	cli.RegisterAllEventRouter(OnEventReceived)
-
-	err := cli.Start(context.Background())
-	if err != nil {
-		panic(err)
-	}
-
-	defer cli.Close()
-
-	select {}
-}
+相关代码如下：
+```text {2,4}
+...
+  "main": "index.ts",
+  "scripts": {
+    "start": "npx ts-node --esm ./index.ts",
+...
 ```
 
-以上不超过 60 行的代码实现了这些能力：
+二、在 event_chat_update 目录下，创建 `index.ts` 文件，文件内容如下：
+
+```typescript title="index.ts" {15-31} showLineNumbers
+import {DWClient, DWClientDownStream, EventAck} from 'dingtalk-stream-sdk-nodejs';
+const { program } = require('commander');
+
+program
+    .requiredOption('--clientId <Client ID>', 'your client id, AppKey or SuiteKey')
+    .requiredOption('--clientSecret <Client Secret>', 'your client secret, AppSecret or SuiteSecret')
+    .parse();
+const options = program.opts();
+
+const client = new DWClient({
+    clientId: options.clientId,
+    clientSecret: options.clientSecret,
+});
+
+const onEventReceived = (event: DWClientDownStream) => {
+    if (event.headers?.eventType !== 'chat_update_title') {
+        // ignore events not equals `chat_update_title`; 忽略`chat_update_title`之外的其他事件；
+        // 该示例仅演示 chat_update_title 类型的事件订阅；
+        return {status: EventAck.SUCCESS};
+    }
+    const now = new Date();
+    console.log(`received event, 
+  delay=${now.getTime() - parseInt(event.headers?.eventBornTime || '0')}ms, 
+  eventType=${event.headers?.eventType}, 
+  eventId=${event.headers?.eventId}, 
+  eventBornTime=${event.headers?.eventBornTime},  
+  eventCorpId=${event.headers?.eventCorpId},
+  eventUnifiedAppId=${event.headers?.eventUnifiedAppId}, 
+  data=${event.data}`)
+    return {status: EventAck.SUCCESS, message: 'OK'}; // message 属性可以是任意字符串；
+}
+
+client
+    .registerAllEventListener(onEventReceived)
+    .connect();
+```
+
+以上不超过 40 行的代码实现了这些能力：
 1. 通过命令行参数读取 Client ID 和 Client Secret 选项
-2. 通过 Client ID 和 Client Secret 创建 Stream Client
+2. 通过 Client ID 和 Client Secret 创建 Stream Client (DWClient)
 3. 在 Stream Client 中注册事件推送的监听服务，实现变更通知的接收能力
 4. 在事件回调方法中，通过日志记录变更通知的消息内容，你可以可以改造这段代码，将变更通知写入自己的数据库中
 
 ## 运行事件订阅服务
 
-通过以下命令可以运行你的事件订阅服务，当看到这样的日志输出时候表示运行成功 `[INFO] connect success, sessionId=[...]`
+通过以下命令可以运行你的事件订阅服务，当看到这样的日志输出时候表示运行成功 `Socket open`
 ”
 
 ```shell
-go mod tidy
-go run event_handler.go --client_id="your-client-id" --client_secret="your-client-secret"
+npm run start -- --clientId="your-client-id" --clientSecret="your-client-secret"
 ```
 
 :::caution 注意事项
@@ -116,4 +110,4 @@ go run event_handler.go --client_id="your-client-id" --client_secret="your-clien
 
 ## 相关链接
 
-* [GitHub 上示例代码](https://github.com/open-dingtalk/dingtalk-tutorial-go)
+* [GitHub 上示例代码](https://github.com/open-dingtalk/dingtalk-tutorial-nodejs)
