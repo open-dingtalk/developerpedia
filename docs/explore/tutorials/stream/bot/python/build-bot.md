@@ -13,68 +13,78 @@ sidebar_position: 3
 ```shell
 mkdir bot_echo_text
 cd bot_echo_text
-go mod init bot_echo_text
 ```
 
 ## 安装依赖
 
 ```shell
-go get github.com/open-dingtalk/dingtalk-stream-sdk-go
+python3 -m pip install dingtalk-stream
 ```
 
 ## 开发机器人服务
 
-在 go.mod 相同的目录下，创建 `echo_text.go` 文件，文件内容如下：
+在 `bot_echo_text` 目录中，创建 `echo_text.py` 文件，文件内容如下：
 
-```go title="echo_text.go" showLineNumbers
-package main
+```python title="echo_text.py" showLineNumbers
+# !/usr/bin/env python
 
-import (
-	"context"
-	"flag"
-	"fmt"
-	"github.com/open-dingtalk/dingtalk-stream-sdk-go/chatbot"
-	"github.com/open-dingtalk/dingtalk-stream-sdk-go/client"
-	"github.com/open-dingtalk/dingtalk-stream-sdk-go/logger"
-	"strings"
-)
+import argparse
+import logging
+from dingtalk_stream import AckMessage
+import dingtalk_stream
 
-func OnChatBotMessageReceived(ctx context.Context, data *chatbot.BotCallbackDataModel) ([]byte, error) {
-	replyMsg := []byte(fmt.Sprintf("echo received message: [%s]", strings.TrimSpace(data.Text.Content)))
 
-	replier := chatbot.NewChatbotReplier()
-	if err := replier.SimpleReplyText(ctx, data.SessionWebhook, replyMsg); err != nil {
-		return nil, err
-	}
-	return []byte(""), nil
-}
+def setup_logger():
+    logger = logging.getLogger()
+    handler = logging.StreamHandler()
+    handler.setFormatter(
+        logging.Formatter('%(asctime)s %(name)-8s %(levelname)-8s %(message)s [%(filename)s:%(lineno)d]'))
+    logger.addHandler(handler)
+    logger.setLevel(logging.INFO)
+    return logger
 
-func main() {
-	var clientId, clientSecret string
-	flag.StringVar(&clientId, "client_id", "", "your-client-id")
-	flag.StringVar(&clientSecret, "client_secret", "", "your-client-secret")
-	flag.Parse()
-	if len(clientId) == 0 || len(clientSecret) == 0 {
-		panic("command line options --client_id and --client_secret required")
-	}
 
-	logger.SetLogger(logger.NewStdTestLogger())
+def define_options():
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        '--client_id', dest='client_id', required=True,
+        help='app_key or suite_key from https://open-dev.digntalk.com'
+    )
+    parser.add_argument(
+        '--client_secret', dest='client_secret', required=True,
+        help='app_secret or suite_secret from https://open-dev.digntalk.com'
+    )
+    options = parser.parse_args()
+    return options
 
-	cli := client.NewStreamClient(client.WithAppCredential(client.NewAppCredentialConfig(clientId, clientSecret)))
-	cli.RegisterChatBotCallbackRouter(OnChatBotMessageReceived)
 
-	err := cli.Start(context.Background())
-	if err != nil {
-		panic(err)
-	}
+class EchoTextHandler(dingtalk_stream.ChatbotHandler):
+    def __init__(self, logger: logging.Logger = None):
+        super(dingtalk_stream.ChatbotHandler, self).__init__()
+        if logger:
+            self.logger = logger
 
-	defer cli.Close()
+    async def process(self, callback: dingtalk_stream.CallbackMessage):
+        incoming_message = dingtalk_stream.ChatbotMessage.from_dict(callback.data)
+        text = incoming_message.text.content.strip()
+        self.reply_text(text, incoming_message)
+        return AckMessage.STATUS_OK, 'OK'
 
-	select {}
-}
+def main():
+    logger = setup_logger()
+    options = define_options()
+
+    credential = dingtalk_stream.Credential(options.client_id, options.client_secret)
+    client = dingtalk_stream.DingTalkStreamClient(credential)
+    client.register_callback_handler(dingtalk_stream.chatbot.ChatbotMessage.TOPIC, EchoTextHandler(logger))
+    client.start_forever()
+
+
+if __name__ == '__main__':
+    main()
 ```
 
-以上不超过 50 行的代码实现了这些能力：
+以上不超过 60 行的代码实现了这些能力：
 1. 通过命令行参数读取 Client ID 和 Client Secret 选项
 2. 通过 Client ID 和 Client Secret 创建 Stream Client
 3. 在 Stream Client 中注册机器人消息回调方法，实现消息接收能力
@@ -82,12 +92,10 @@ func main() {
 
 ## 运行机器人服务
 
-通过以下命令可以运行你的机器人服务，当看到这样的日志输出时候表示运行成功 `[INFO] connect success, sessionId=[...]`
-”
+通过以下命令可以运行你的机器人服务，当看到这样的日志输出时候表示运行成功 `INFO     endpoint is {'endpoint': 'wss://wss-....`
 
 ```shell
-go mod tidy
-go run echo_text.go --client_id="your-client-id" --client_secret="your-client-secret"
+python3 ./echo_text.py --client_id="your-client-id" --client_secret="your-client-secret"
 ```
 
 :::caution 注意事项
@@ -98,4 +106,4 @@ go run echo_text.go --client_id="your-client-id" --client_secret="your-client-se
 
 ## 相关链接
 
-* [GitHub 上示例代码](https://github.com/open-dingtalk/dingtalk-tutorial-go)
+* [GitHub 上示例代码](https://github.com/open-dingtalk/dingtalk-tutorial-python)
