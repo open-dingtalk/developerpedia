@@ -11,7 +11,7 @@ sidebar_position: 3
 ## 创建 Java 模块
 
 参考 [Spring Quickstart Guide](https://spring.io/quickstart) 创建一个空的 Spring 工程。
-推荐新手采用本教程相同的配置，[点此链接](https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.15&packaging=war&jvmVersion=1.8&groupId=com.example&artifactId=event-chat-update&name=event-chat-update&description=Demo%20project%20for%20DingTalk&packageName=com.example.event)进入 spring intializr，本教程相关的参数已经通过 URL 参数自动携带过去。
+推荐新手采用本教程相同的配置，[点此链接](https://start.spring.io/#!type=maven-project&language=java&platformVersion=2.7.15&packaging=jar&jvmVersion=1.8&groupId=com.example&artifactId=event-chat-update&name=event-chat-update&description=Demo%20project%20for%20DingTalk&packageName=com.example.event)进入 spring intializr，本教程相关的参数已经通过 URL 参数自动携带过去。
 
 本教程使用的主要参数包括：
 
