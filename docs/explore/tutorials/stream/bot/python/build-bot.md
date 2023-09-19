@@ -6,7 +6,7 @@ sidebar_position: 3
 
 在本章节中，将会介绍如何用 Python 开发一个聊天机器人服务，实现基本的介绍和发送消息能力。
 
-本教程的完整代码可以在 [GitHub 仓库](https://github.com/open-dingtalk/dingtalk-tutorial-python)中获取。
+本教程的完整代码可以在 [GitHub 仓库](https://github.com/open-dingtalk/dingtalk-tutorial-python)中获取，你也可以跳过本文中构建步骤，直接从 GitHub 中 clone 相关代码。
 
 ## 创建 Go 模块
 
