@@ -23,7 +23,7 @@ sidebar_position: 99
 
 ## 是否支持 .NET、PHP？
 
-当前官方 SDK 支持 Java、Python、Node.js、Golang，其他针对其他语言我们提供了协议文档，便于开发者自行实现。
+当前官方 SDK 支持 Java、Python、Node.js、Go，其他针对其他语言我们提供了协议文档，便于开发者自行实现。
 
 详见：[钉钉 SDK 概述](/docs/develop/sdk/overview)
 

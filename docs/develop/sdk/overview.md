@@ -15,7 +15,7 @@ sidebar_position: 1
 * Java（示例，而不是SDK）：https://github.com/open-dingtalk/dingtalk-stream-sdk-java-quick-start
 * Node.js（SDK+示例）：https://github.com/open-dingtalk/dingtalk-stream-sdk-nodejs
 * Python（SDK+示例）：https://github.com/open-dingtalk/dingtalk-stream-sdk-python
-* Golang（SDK+示例）：https://github.com/open-dingtalk/dingtalk-stream-sdk-go
+* Go（SDK+示例）：https://github.com/open-dingtalk/dingtalk-stream-sdk-go
 
 更多语言 SDK 欢迎社区参与贡献，将在此页面中予以推荐展示，目前测试验证通过的生态 SDK 如下：
 

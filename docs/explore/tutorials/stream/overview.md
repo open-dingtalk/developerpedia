@@ -5,18 +5,26 @@ sidebar_position: 1
 
 # 概述
 
-本文档介绍如何通过开发一个钉钉机器人，具备收发消息能力。
+钉钉 Stream 模式可以用于多种场景的回调，包括事件订阅、机器人接收消息、卡片回调等。该系列教程详细介绍如何从零开始接入各种能力。
 
-## 教程列表
+## 机器人接收消息
 
 通过学习本教程，你可以开发一个钉钉聊天机器人，具备以下能力：
 
 * 接收聊天会话中的消息内容，包括单聊和群聊。备注：群聊仅限 AT 机器人的消息。
 * 回复消息，或者主动发送消息到聊天会话中
 
-| 教程                                                    | GitHub 代码仓库 |
-|-------------------------------------------------------|---|
-| [Go](/docs/explore/tutorials/stream/bot/golang/intro) | https://github.com/open-dingtalk/dingtalk-tutorial-go | 
+| 教程                                           | GitHub 代码仓库 |
+|----------------------------------------------|---|
+| [Go 教程文档](/docs/explore/tutorials/stream/bot/go) | https://github.com/open-dingtalk/dingtalk-tutorial-go |
+
+## 事件订阅
+
+| 教程                                                          | GitHub 代码仓库                                               |
+|-------------------------------------------------------------|-----------------------------------------------------------|
+| [Go 教程文档](/docs/explore/tutorials/stream/event/go)      | https://github.com/open-dingtalk/dingtalk-tutorial-go     |
+| [Node.js 教程文档](/docs/explore/tutorials/stream/event/nodejs) | https://github.com/open-dingtalk/dingtalk-tutorial-nodejs |
+
 
 ## 进一步学习
 
