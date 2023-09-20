@@ -2,27 +2,29 @@
 sidebar_position: 4
 ---
 
-# 如何写好文档（持续更新）
+# 如何写好文档（持续更新中）
 
 为了持续改善文档质量，特编写相关指引，通过简单易懂的规则，让每个参与钉钉开发者百科的开发者都可以持续输出高质量文档。
 
 ## 术语规范
 
-专业术语，需要保持其大小写一致性：
+专业术语，需要保持其大小写正确性：
 
 * **DingTalk**：钉钉。避免使用 dingTalk、Dingtalk
 
 常用英文单词，或者总所周知的术语，按照一个单词来使用，避免拆成两个单词：
 
-* **timestamp**，而不是 timeStamp
-* **callback**，而不是 callBack
+* **Timestamp**，而不是 timeStamp、time-stamp
+* **Callback**，而不是 callBack、call_back
+* **Input**，而不是 InPut、inPut
+* **Output**，而不是 OutPut、outPut
 
 有特定大小写规则的术语，不要混淆代码规范和文档规范
 
 * **OpenAPI**，在文档中不要写成了 openApi、OpenApi、OAPI
 * **App ID**
   * 在文档中，一律使用“App ID”，两个单词中间有空格。不是 appId、AppID、AppId、Appid、appid
-  * 在代码中，遵守相应编程语言的规范，例如 Java 代码中的 appId 和 Python 代码中的 app_id 都是允许的
+  * 在代码中，遵守相应编程语言的规范，例如 Java 代码中的 appId 和 Python 代码中的 app_id 都是推荐的用法
 * **User ID**，同上，在文档中不要写成 userId、UserID
 * **Corp ID**，同上，在文档中不要写成 corpId、CorpID
 
