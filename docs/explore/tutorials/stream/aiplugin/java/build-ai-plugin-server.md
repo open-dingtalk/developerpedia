@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # 2. 搭建 AI 插件服务
 
-在本章节，将会介绍如何在使用钉钉开放平台[Stream mode](https://open-dingtalk.github.io/developerpedia/docs/learn/stream/overview)搭建 AI 插件服务。包括以下内容：
+在本章节，将会介绍如何在使用钉钉开放平台[Stream mode](/docs/learn/stream/overview)搭建 AI 插件服务。包括以下内容：
 1. 搭建 AI 插件处理逻辑
 2. 填充应用信息
 3. 注册 AI 插件回调通道
