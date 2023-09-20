@@ -29,6 +29,11 @@ sidebar_position: 2
 
 推荐采用 WebStorm 等 IDE 开发会有更好的编辑和调试体验。
 
+## 相关规范
+
+* [如何写好文档](/docs/contrib/docs-guide)
+* [如何写好技术教程](/docs/contrib/tutorials-guide)
+
 ## 相关链接
 
 1. 当前的[开发者百科](/docs/intro)采用 Facebook 开源的 [docusaurus](https://docusaurus.io) 系统搭建，可以点击链接前往 docusaurus 官网了解更深入的使用说明。
