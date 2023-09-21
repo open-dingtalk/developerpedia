@@ -27,7 +27,7 @@ sidebar_position: 1
 1. 通过 GitHub release 触发（本文步骤说明章节有相关说明），用于发布 release 包
 2. 提交到 develop 分支触发，用于发布 SNAPSHOT 包
 
-```text
+```text showLineNumbers {2,5}
 on:
   push:
     branches:
@@ -37,7 +37,7 @@ on:
 ```
 
 构建脚本：
-```text
+```text showLineNumbers {4-5,14,17}
       - name: Set up JDK 8
         uses: actions/setup-java@v3
         with:
@@ -61,7 +61,7 @@ on:
 ```
 
 Maven Central 发布的密钥信息，通过 [GitHub secrets](https://docs.github.com/actions/security-guides/encrypted-secrets) 管理）：
-```text
+```text showLineNumbers {4-5,10-11}
       - name: Import GPG private key
         uses: crazy-max/ghaction-import-gpg@v6
         with:
