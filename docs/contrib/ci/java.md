@@ -19,6 +19,13 @@ sidebar_position: 1
    2. 要求：如果是 Breaking change，需要 title 中备注，格式为 `vX.Y.Z Breaking change`
 3. **检查 CI 结果**：完成步骤 2 的 Release 之后，GitHub action 就会自动执行，可以进入 [Actions](https://github.com/open-dingtalk/dingtalk-stream-sdk-java/actions) 中检查构建状态及结果。
 
+## 推荐的流程
+
+1. **Fork 和开发**：Fork 该项目代码，完成开发和测试，version 采用 SNAPSHOT 后缀
+2. **PR 和 测试构建**：发起 Pull Request，目标是 open-dingtalk/dingtalk-stream-sdk-java 的 `develop` 分支
+3. **CR 和 Merge**：管理员完成 CodeReview 并 Merge
+4. **Release**：管理员将 develop 分支合并到 main 分支后，更新版本号为 Release 版本号，并创建 Release Notes，触发正式的构建和发布
+
 ## 深入理解原理
 
 该项目使用了 [GitHub Actions](https://docs.github.com/en/actions) 实现自动化构建与 NPM 发布。对应的构建脚本在 [.github/workflows/release.yml](https://github.com/open-dingtalk/dingtalk-stream-sdk-python/blob/main/.github/workflows/release.yml) 中
