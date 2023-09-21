@@ -11,6 +11,8 @@ import TabItem from '@theme/TabItem';
 
 ## 各类型消息体描述
 
+以下消息体中字段描述可以参考[官方文档：机器人接收消息](https://open.dingtalk.com/document/orgapp/receive-message)。
+
 <Tabs>
 <TabItem value="text" label="文本" default>
 
@@ -119,6 +121,10 @@ import TabItem from '@theme/TabItem';
   }
 }
 ```
+
+:::tip 温馨提示
+语音消息体中 `content.recognition` 字段对应了语音转文字的识别结果，为文字处理提供了极大的便利。支持中文和英文，可以根据实际场景需要使用该信息。
+:::
 
 </TabItem>
 <TabItem value="file" label="文件" default>
