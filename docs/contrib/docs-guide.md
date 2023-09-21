@@ -18,6 +18,7 @@ sidebar_position: 4
 * **Callback**，而不是 callBack、call_back
 * **Input**，而不是 InPut、inPut
 * **Output**，而不是 OutPut、outPut
+* **Endpoint**，而不是 EndPoint、endPoint
 
 有特定大小写规则的术语，不要混淆代码规范和文档规范
 
