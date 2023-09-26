@@ -28,6 +28,7 @@ sidebar_position: 1
 | [Java 教程文档](/docs/explore/tutorials/stream/event/java)      | https://github.com/open-dingtalk/dingtalk-tutorial-java   |
 | [Go 教程文档](/docs/explore/tutorials/stream/event/go)          | https://github.com/open-dingtalk/dingtalk-tutorial-go     |
 | [Node.js 教程文档](/docs/explore/tutorials/stream/event/nodejs) | https://github.com/open-dingtalk/dingtalk-tutorial-nodejs |
+| [Python 教程文档](/docs/explore/tutorials/stream/event/python)  | https://github.com/open-dingtalk/dingtalk-tutorial-python |
 
 
 ## 进一步学习

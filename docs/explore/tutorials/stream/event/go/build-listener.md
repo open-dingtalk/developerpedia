@@ -94,7 +94,6 @@ func main() {
 ## 运行事件订阅服务
 
 通过以下命令可以运行你的事件订阅服务，当看到这样的日志输出时候表示运行成功 `[INFO] connect success, sessionId=[...]`
-”
 
 ```shell
 go mod tidy
