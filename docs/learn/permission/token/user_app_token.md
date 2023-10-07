@@ -12,10 +12,10 @@ sidebar_position: 1
 ![授权码模式时序图](/img/learn/permission/auth_code_flow_sequence.png)
 
 ## 选择应用获取授权的交互形式
-* **选择一**：如果您希望用户在浏览器上完成授权操作，效果如下图，可以参考文档：[浏览器内获取用户委托的委托访问凭证](/docs/develop/permission/get_user_app_token_browser)。由于浏览器不持有用户身份，因此用户需要先登录再授权。
+* **选择一**：如果您希望用户在浏览器上完成授权操作，效果如下图，可以参考文档：[浏览器内获取用户委托的委托访问凭证](/docs/develop/permission/token/get_user_app_token_browser)。由于浏览器不持有用户身份，因此用户需要先登录再授权。
 ![浏览器内用户授权UI](/img/learn/permission/auth_code_flow_browser_ui.png)
 
-* **选择二**：如果您希望用户在钉钉端内完成授权操作，效果如下图，可以参考文档：[钉钉端内获取用户委托的访问凭证](/docs/develop/permission/get_user_app_token_jsapi)。由于钉钉客户端已持有用户身份，因此用户不需要登录，可以直接授权。
+* **选择二**：如果您希望用户在钉钉端内完成授权操作，效果如下图，可以参考文档：[钉钉端内获取用户委托的访问凭证](/docs/develop/permission/token/get_user_app_token_jsapi)。由于钉钉客户端已持有用户身份，因此用户不需要登录，可以直接授权。
 
 |                                   移动端                                   |                                 PC端                                 |
 |:-----------------------------------------------------------------------:|:-------------------------------------------------------------------:|
