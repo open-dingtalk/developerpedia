@@ -10,7 +10,7 @@ sidebar_position: 4
 
 专业术语，需要保持其大小写正确性：
 
-* **DingTalk**：钉钉。避免使用 dingTalk、Dingtalk
+* **DingTalk**：钉钉。避免使用 dingTalk、Dingtalk、Dingding
 
 常用英文单词，或者总所周知的术语，按照一个单词来使用，避免拆成两个单词：
 
