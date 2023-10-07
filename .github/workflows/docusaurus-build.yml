@@ -1,8 +1,6 @@
-name: deploy-docusaurus
+name: build-docusaurus
 
 on:
-  push:
-    branches: [main]
   pull_request:
     branches: [main]
 
@@ -27,11 +25,3 @@ jobs:
         run: |
           npm install 
           npm run build
-      - name: Deploy to GitHub Pages
-        if: success()
-        uses: crazy-max/ghaction-github-pages@v2
-        with:
-          target_branch: gh-pages
-          build_dir: build
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
