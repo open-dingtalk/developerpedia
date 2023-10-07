@@ -1,7 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 ---
 
-# 4. 使用 AI 插件搭建 AI 技能
+# 5. 使用 AI 插件搭建 AI 技能
 
-coming soon ...
+## 创建 AI 技能
+![img.png](/img/explore/stream/aiplugin/create-ai-skill.png)

@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 4
 ---
 
-# 2. 搭建 AI 插件服务
+# 4. 搭建 AI 插件服务
 
 在本章节，将会介绍如何在使用钉钉开放平台[Stream mode](/docs/learn/stream/overview)搭建 AI 插件服务。包括以下内容：
 1. 搭建 AI 插件处理逻辑
