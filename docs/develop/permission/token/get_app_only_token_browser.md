@@ -3,7 +3,7 @@ sidebar_position: 3
 ---
 
 # 浏览器内获取应用访问凭证
-应用以应用的身份访问资源时（[应用访问](/docs/learn/permission/application_permission)），可参考本文流程获取应用访问凭证。在钉钉开放平台上，应用想要获取应用访问的权限，必须经过组织管理员的同意。
+应用以应用的身份访问资源时（[应用访问](/docs/learn/permission/intro/application_permission)），可参考本文流程获取应用访问凭证。在钉钉开放平台上，应用想要获取应用访问的权限，必须经过组织管理员的同意。
 :::info Note
 本文中描述的流程，目前只适用于企业三方应用。
 :::

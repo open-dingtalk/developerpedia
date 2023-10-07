@@ -5,7 +5,7 @@ sidebar_position: 1
 # 获取用户委托的访问凭证
 如果你的应用需要获取用户的委托许可，然后调用钉钉 OpenAPI 访问用户的资源，请参考下文获取用户委托的访问凭证。
 * 如果你的应用需要获取应用访问许可，然后调用钉钉 OpenAPI 访问资源，可以参考[获取应用的访问凭证](/docs/learn/permission/token/app_only_token)。 
-* 如果您想了解更多，什么是“委托访问”和“应用访问”，可移步[委托访问](/docs/learn/permission/delegated_permission)和[应用访问](/docs/learn/permission/application_permission)。
+* 如果您想了解更多，什么是“委托访问”和“应用访问”，可移步[委托访问](/docs/learn/permission/intro/delegated_permission)和[应用访问](/docs/learn/permission/intro/application_permission)。
 
 ## 获取和使用访问凭证（Access Token）的时序图
 钉钉开放平台提供的委托访问授权，遵循 OAuth 2.0 标准的授权码模式 [RFC 6749 Authorization Code Grant](https://datatracker.ietf.org/doc/html/rfc6749#section-4.1)。
