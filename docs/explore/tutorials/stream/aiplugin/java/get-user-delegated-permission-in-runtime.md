@@ -1,19 +1,19 @@
 ---
-sidebar_position: 8
+sidebar_position: 9
 ---
 
-# 8. 进阶：获取用户代理凭证
+# 9. 进阶：获取用户代理凭证
 在本章节，将会介绍如何在获取[用户代理凭证](https://open.dingtalk.com)访问钉钉[GraphAPI](https://open.dingtalk.com)。包括以下内容：
 1. 什么是用户代理凭证
-2. 用户代理凭证如何访问钉钉GraphAPI
+2. 用户代理凭证如何访问钉钉 Graph API
 3. 在钉钉 AIPaaS 中如何触发用户授权代理凭证
-4. 进阶：AI 插件服务如何获取用户代理凭证
+4. 进阶：Graph API 服务如何获取用户代理凭证
 
 ## 什么是用户代理凭证
 
 coming soon...
 
-## 用户代理凭证如何访问钉钉GraphAPI
+## 用户代理凭证如何访问钉钉 Graph API
 
 coming soon...
 
