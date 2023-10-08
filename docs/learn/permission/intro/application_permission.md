@@ -24,7 +24,7 @@ sidebar_position: 3
 * 其次，你的应用需要被使用者组织的管理员授权。管理员可以给你的应用授权的场景有以下三种：
   1. 管理员通过应用市场开通你的应用时完成授权，详见[应用开通时授权](/docs/learn/permission/manage/app_store_consent)。
   2. 管理员在工作台中主动手动为你的应用授权，详见[工作台权限管理](/docs/learn/permission/manage/workbench_consent)。
-  3. 你的应用编码为在应用内为管理员展示授权窗口，动态请求管理员授权，详见[钉钉端内获取应用访问凭证](/docs/develop/permission/token/get_app_only_token_jsapi)。
+  3. 你的应用编码为在应用内为管理员展示授权窗口，动态请求管理员授权，详见[钉钉端内获取应用的访问凭证](/docs/develop/permission/token/jsapi/get_app_only_token_jsapi)。
 * 同样的，**请遵循最小权限原则**：永远不要向用户请求你的应用用不到的权限项。例如，如果你的应用想要列出用户的聊天列表而不是每一条聊天消息，你需要请求获取 `Chat.ReadBasic` 而不是 `Chat.Read` 。
     * 这可以帮助你的应用在被攻陷时降低安全风险，也可以帮助你的应用更容易地通过管理员的授权同意。
     * 如果用户怀疑你的应用存在超量获取权限的行为，平台会将收到的用户反馈同步给你的应用。
