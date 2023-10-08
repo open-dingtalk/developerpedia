@@ -1,8 +1,8 @@
 ---
-sidebar_position: 3
+sidebar_position: 2
 ---
 
-# 浏览器内获取应用访问凭证
+# 浏览器内获取应用的访问凭证
 应用以应用的身份访问资源时（[应用访问](/docs/learn/permission/intro/application_permission)），可参考本文流程获取应用访问凭证。在钉钉开放平台上，应用想要获取应用访问的权限，必须经过组织管理员的同意。
 :::info Note
 本文中描述的流程，目前只适用于企业三方应用。
@@ -19,7 +19,7 @@ sidebar_position: 3
 ![配置回调地址](/img/develop/permission/redirect_uri_config.png)
 
 
-4. 给你的应用勾选需要调用的 OpenAPI 对应的权限点。比如勾选宜搭表单数据读权限`Yida.Form.Read`。
+4. 给你的应用勾选需要调用的 OpenAPI 对应的权限点。比如勾选宜搭表单数据读权限 `Yida.Form.Read` 。
 
 ![配置开发态权限点](/img/develop/permission/dev_scope_config.png)
 
@@ -39,7 +39,7 @@ sidebar_position: 3
 
 ### 步骤 2-1：获取管理员授权
 按照下方教程构建授权链接。
-:::info Tip
+:::info 开发者Tip
 把拼接好的链接贴到浏览器里，即可预览钉钉提供的授权服务。
 :::
 
@@ -59,7 +59,7 @@ client_id={your_client_id}
 
 * 管理员会经历登录和授权：
   * 管理员点击“允许”后，钉钉授权服务器会把信息回调给应用配置的重定向URL地址。 
-  * 授权页上展示的是你在开发者后台给应用勾选的所有应用权限点，详见步骤1的4。 
+  * 授权页上展示的是你在开发者后台给应用勾选的所有应用权限点，详见步骤一的第4点。 
   * 如果所有的权限点均已被授，即应用没有待授权的权限点，授权服务器会直接回调成功。
 
 ![浏览器内管理员授权UI](/img/learn/permission/client_credential_flow_browser_ui.png)
@@ -87,7 +87,7 @@ GET http://127.0.0.1:8000?corp_id=ding123&admin_consent=True&state=dddd
 
 
 ### 步骤 2-2：使用 ClientId 和 ClientSecret 获取 Access Token
-参考官方文档：[获取第三方应用授权企业的 Access Token ](https://open.dingtalk.com/document/isvapp/obtain-the-access_token-of-the-authorized-enterprise)
+参考官方文档：[获取应用的访问凭证 Access Token](https://open.dingtalk.com/document/isvapp/obtain-the-access_token-of-the-authorized-enterprise)
 ```http
 POST /v1.0/oauth2/corpAccessToken HTTP/1.1
 Host:api.dingtalk.com
