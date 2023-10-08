@@ -93,8 +93,8 @@ Content-Type:application/json
 }
 ```
 
-## 步骤四：用应用的访问凭证调用 OpenAPI
-恭喜你成功获得应用的访问凭证，请调用相应的 OpenAPI 吧！
+## 步骤四：使用 Access Token 调用 OpenAPI
+恭喜你成功获得应用的访问凭证，你可以用它请求对应的 OpenAPI 。如果 Refresh Token 过期，重复上述步骤。
 
 
 ## 贴心示例

@@ -110,7 +110,7 @@ openAuth({
 
 
 
-## 步骤三：用授权码兑换委托访问凭证
+## 步骤三：用授权码兑换用户委托的访问凭证
 参考官方文档：[获取用户委托的访问凭证 Access Token](https://open.dingtalk.com/document/isvapp/obtain-user-token#)
 ```http request
 POST /v1.0/oauth2/userAccessToken HTTP/1.1
@@ -126,8 +126,8 @@ Content-Type:application/json
 }
 ```
 
-## 步骤四：用用户委托的访问凭证调用 OpenAPI
-恭喜你成功获得用户委托的访问凭证，请调用相应的 OpenAPI 吧！
+## 步骤四：使用 Access Token 调用 OpenAPI
+恭喜你成功获得用户委托的访问凭证，你可以用它请求对应的 OpenAPI 。如果 Refresh Token 过期，重复上述步骤。
 
 
 ## 贴心示例
