@@ -48,6 +48,17 @@ sidebar_position: 4
   * 正确：已经成功接入钉钉 OpenAPI，开始业务功能集成
   * 错误：已经成功接入钉钉 OpenAPI ，开始业务功能集成
 
+## 命名规范
+
+### URL 命名
+
+文档的 URL 命名采用英文小写字母、字母、中划线组成。
+
+例如：
+* ✅ 推荐使用：`/docs/develop/best-practices/permission-deny`
+* ❌ 避免使用：`/docs/develop/best_practices/permission_deny`（下划线）
+* ❌ 避免使用：`/docs/develop/bestPractices/permissionDeny`（大小写字母）
+
 ## 相关链接
 
 * [中英文排版指南](https://www.ifeegoo.com/chinese-and-english-typesetting-guidelines.html)
