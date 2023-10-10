@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# 6. 构建 AI 插件返回数据
+# 5. 构建 AI 插件返回数据
 在本章节，将会介绍如何构造AI插件的返回值。包括以下内容：
 1. 使用默认卡片返回数据
 2. 使用自定义卡片元件返回数据
@@ -24,8 +24,14 @@ coming soon...
 #### 3. 搭建 AI 卡片 
 ![create-ai-card-ui.png](/img/explore/stream/aiplugin/create-ai-card-ui.png)
 
+### 在AI技能中选择自定义卡片
+![img.png](/img/explore/stream/aiplugin/message-card-chain.jpg)
 ### 使用自定义卡片元件
 ![use-ai-card-component.png](/img/explore/stream/aiplugin/use-ai-card-component.png)
+
+:::info 提示信息
+cardTemplateId：卡片的模版ID
+:::
 
 ### 渲染返回数据
 ```java title="GraphAPIPluginCallback.java" showLineNumbers

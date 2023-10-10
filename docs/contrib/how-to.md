@@ -13,7 +13,7 @@ sidebar_position: 2
 
 ## 找到当前项目地址和文档地址
 
-1. GitHub上开源项目地址：可以通过本文右上角 [GitHub](https://github.com/open-dingtalk/developerpedia) 链接跳转到对应的项目首页；
+1. GitHub上开源项目地址 ：可以通过本文右上角 [GitHub](https://github.com/open-dingtalk/developerpedia) 链接跳转到对应的项目首页；
 2. 文档地址：对于每一篇文档，可以通过左下角“Edit this page”链接找到对应的文档地址；
 
 ## 如何编辑和验证
