@@ -54,15 +54,15 @@ sidebar_position: 1
 以移动端为例：
 * Step 1：点击工作台右上角的【齿轮】进入企业管理。然后点击【应用&模板】进入应用管理。找到想要管理的应用，点击【设置】，进入该应用的管理页。
 
-![工作台授权1](/img/develop/permission/workbench_grant_1.png)
+![工作台授权入口](/img/learn/permission/workbench_grant_entry.png)
 
 * Step 2：管理员可以看到授权管理中有待授权的红点，点击进入。你可以看到待授权的敏感权限清单，和应用开通时已经授予的基础权限清单。你可以在外层直接点击授权，也可以进入敏感权限清单，进行单个权限授权。
 
-![工作台授权2](/img/develop/permission/workbench_grant_2.png)
+![工作台授权敏感权限](/img/develop/permission/workbench_grant_high_grade_scope.png)
 
 * Step 3-1：点击授权，即可完成授权。
 
-![管理员授权](/img/develop/permission/admin_consent.png)
+![管理员授权](/img/develop/permission/admin_consent_high_grade_scope.png)
 
 * Step 3-2：如果你不是全组织通讯录管理员，下方窗口会让你选择处理人，点击联系管理员，就会发单聊消息卡片给到全组织通讯录管理员。
 
@@ -75,9 +75,8 @@ sidebar_position: 1
 ![管理员解除授权](/img/develop/permission/admin_revoke_permission.png)
 
 :::info Note
-目前只支持敏感权限的解除授权，基础权限不可解除授权。
+目前只支持敏感权限的解除授权，基础权限的解除授权在规划中，敬请期待。
 :::
-
 
 
 #### 3-2-2 在OA后台授权
