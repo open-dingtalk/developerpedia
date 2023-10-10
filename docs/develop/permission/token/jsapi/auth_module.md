@@ -75,17 +75,17 @@ function isAuthSDKSupport() {
 2. 授权组件 jsapi：
 ```js
 openAuth({
-clientId:'suitexxx', // 应用的 ClientID
-corpId:'dingxxx', // 授权组织的 CorpId
-rpcScope:'Mock.Scope.Code', // 权限点 Code
-fieldScope:'Mock.Scope.Code', // 特殊权限点 Code, 使用场景较少，常为空
-type:0 // 0 标识授委托授权；1 标识应用授权
+  clientId:'suitexxx', // 应用的 ClientID
+  corpId:'dingxxx', // 授权组织的 CorpId
+  rpcScope:'Mock.Scope.Code', // 权限点 Code
+  fieldScope:'Mock.Scope.Code', // 特殊权限点 Code, 使用场景较少，常为空
+  type:0 // 0 标识授委托授权；1 标识应用授权
 }).then((res)=>{
 // 处理返回数据
 })
 ```
 
 3. 请求、响应与错误码：
-* 如果你的应用采用委托访问，详见[钉钉端内获取用户委托的访问凭证](/docs/develop/permission/token/jsapi/get_user_app_token_jsapi)。
-* 如果你的应用采用应用访问，详见[钉钉端内获取应用的访问凭证](/docs/develop/permission/token/jsapi/get_app_only_token_jsapi)。
+* 如果你的应用采用[委托访问](/docs/learn/permission/intro/delegated_permission)，详见[钉钉端内获取用户委托的访问凭证](/docs/develop/permission/token/jsapi/get_user_app_token_jsapi)。
+* 如果你的应用采用[应用访问](/docs/learn/permission/intro/application_permission)，详见[钉钉端内获取应用的访问凭证](/docs/develop/permission/token/jsapi/get_app_only_token_jsapi)。
 

@@ -108,4 +108,4 @@ Content-Type:application/json
 | 400010 | redirect_uri 参数错误，和开发者后台配置的重定向URL要匹配。                                                       |
 | 500407 | 当前登录用户不是管理员，要联系管理员进行授权管理。                                                                   |
 | 500408 | 当前登录用户不是该组织的成员，无法进行授权管理。                                                                    |
-| 70003  | 当前组织没有开通过此应用，需要通过应用市场查找并开通应用。详见[应用市场开通授权](/docs/learn/permission/manage/app_store_consent)。 |
+| 70003  | 当前组织没有开通过此应用，需要通过应用市场查找并开通应用。详见[应用市场开通授权](/docs/learn/permission/manage/app-store-consent)。 |
