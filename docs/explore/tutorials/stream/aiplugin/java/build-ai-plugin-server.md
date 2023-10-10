@@ -1,8 +1,8 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 ---
 
-# 4. 搭建 AI 插件服务
+# 3. 搭建 AI 插件服务
 
 在本章节，将会介绍如何在使用钉钉开放平台[Stream mode](/docs/learn/stream/overview)搭建 AI 插件服务。包括以下内容：
 1. 搭建 AI 插件处理逻辑
@@ -15,17 +15,19 @@ sidebar_position: 4
 
 
 ## 搭建 AI 插件处理逻辑
-```java title="AIPluginCallbackConsumer.java" showLineNumbers
-public class AIPluginCallbackConsumer implements OpenDingTalkCallbackListener<DingTalkAIPluginRequest, DingTalkAIPluginResponse> {
+```java title="AIGraphPluginCallbackListener.java" showLineNumbers
+public class AIGraphPluginCallbackListener implements OpenDingTalkCallbackListener<GraphAPIRequest, GraphAPIResponse> {
     @Override
-    public DingTalkAIPluginResponse execute(DingTalkAIPluginRequest request) {
-        log.info("receive AI plugin request={}", request);
-        String abilityKey = request.getAbilityKey();
-        // dos something with abilityKey
-        DingTalkAIPluginResponse response = new DingTalkAIPluginResponse();
-        response.setRequestId(request.getRequestId());
-        response.setResult("echo");
-        return response;
+    public GraphAPIResponse execute(GraphAPIRequest request) {
+        log.info("receive AI graph plugin request={}", request);
+        String abilityKey = request.getHeader(AIPluginHeaders.ABILITY_KEY_NAME);
+        String pluginId = request.getHeader(AIPluginHeaders.PLUGIN_ID_NAME);
+        String pluginVersion = request.getHeader(AIPluginHeaders.PLUGIN_VERSION_NAME);
+        //业务数据的json字符串
+        String data = request.getBody();
+        //获取graph的路径请求{version}/{resource}
+        String path = request.getRequestLine().getPath();
+        return GraphUtils.failed(StatusLine.INTERNAL_ERROR);
     }
 }
 ```
@@ -36,29 +38,7 @@ public class AIPluginCallbackConsumer implements OpenDingTalkCallbackListener<Di
 :::
 
 ## 填充应用信息
-``` properties
-server.port=7001
-spring.web.resources.static-locations=classpath:/static/
-
-# you can get appSecret and appKey from https://open.dingtalk.com/document/orgapp-server/obtain-the-access_token-of-an-internal-app
-app.appKey=<your-app-key> 
-app.appSecret=<your-app-secret>
-
-# optional, you can get from https://open.dingtalk.com/document/orgapp/robot-overview
-robot.code=<your-robot-code>
-
-# constants of robot message topic, don't edit
-robot.msg.topic=/v1.0/im/bot/messages/get
-
-# constants of card callback topic, don't edit
-# see more info from https://open.dingtalk.com/document/orgapp/event-callback-card
-card.callback.topic=/v1.0/card/instances/callback
-
-# constants of AI plugin topic, don't edit
-ai.plugin.topic=/v1.0/agi/plugins/callback
-
-```
-AI 插件的通道标识为`/v1.0/agi/plugins/callback`
+![img.png](/img/explore/stream/aiplugin/fill-app-info.jpg)
 
 将钉钉开放平台中应用的标识填入`<your-app-key>`和`<your-app-secret>`区域
 
@@ -67,35 +47,39 @@ AI 插件的通道标识为`/v1.0/agi/plugins/callback`
 :::
 
 ## 注册 AI 插件回调通道
-```java title="StreamCallbackListener.java" showLineNumbers
-public class StreamCallbackListener {
+```java title="DingTalkStreamClientConfiguration.java" showLineNumbers
+public class DingTalkStreamClientConfiguration {
+
     @Value("${app.appKey}")
-    private String appKey;
-
+    private String clientId;
     @Value("${app.appSecret}")
-    private String appSecret;
+    private String clientSecret;
 
-    @Value("${ai.plugin.topic}")
-    private String aiPluginTopic;
-
-    private AIPluginCallbackConsumer aiPluginCallbackConsumer;
-
-    public StreamCallbackListener(@Autowired AIPluginCallbackConsumer aiPluginCallbackConsumer) {
-        this.aiPluginCallbackConsumer = aiPluginCallbackConsumer;
-    }
-
-    @PostConstruct
-    public void init() throws Exception {
+    /**
+     * 配置OpenDingTalkClient客户端并配置初始化方法(start)
+     *
+     * @param chatBotCallbackListener
+     * @param aiGraphPluginCallbackListener
+     * @return
+     */
+    @Bean(initMethod = "start")
+    public OpenDingTalkClient configureStreamClient(@Autowired ChatBotCallbackListener chatBotCallbackListener,
+                                                    @Autowired AIGraphPluginCallbackListener aiGraphPluginCallbackListener) throws Exception {
         // init stream client
-        OpenDingTalkClient client = OpenDingTalkStreamClientBuilder
-                .custom()
-                .credential(new AuthClientCredential(appKey, appSecret))
-                .registerCallbackListener(aiPluginTopic, aiPluginCallbackConsumer)
-                .build();
-        client.start();
+        return OpenDingTalkStreamClientBuilder.custom()
+                //配置应用的身份信息, 企业内部应用分别为appKey和appSecret, 三方应用为suiteKey和suiteSecret
+                .credential(new AuthClientCredential(clientId, clientSecret))
+                //注册机器人回调
+                .registerCallbackListener(DingTalkStreamTopics.BOT_MESSAGE_TOPIC, chatBotCallbackListener)
+                //注册graph api回调
+                .registerCallbackListener(DingTalkStreamTopics.GRAPH_API_TOPIC, aiGraphPluginCallbackListener).build();
     }
 }
 ```
+## 启动 AI 插件服务
+![img.png](/img/explore/stream/aiplugin/run-server.jpg)
+
+
 
 
 
