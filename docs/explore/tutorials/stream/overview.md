@@ -7,6 +7,10 @@ sidebar_position: 1
 
 钉钉 Stream 模式可以用于多种场景的回调，包括事件订阅、机器人接收消息、卡片回调等。该系列教程详细介绍如何从零开始接入各种能力。
 
+:::info
+本文档中提供了多种语言的教程文档及示例代码。实际上，钉钉 Stream 模式支持更多语言的 SDK，可以前往 [SDK 概述](/docs/develop/sdk/overview) 查看详情。对于没有 SDK 的语言，可以通过 [协议文档](/docs/learn/stream/protocol)（主要是 HTTP 和 WebSocket）自行接入。
+:::
+
 ## 教程分类
 
 ### 机器人
