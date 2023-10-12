@@ -130,6 +130,14 @@ Content-Type:application/json
 恭喜你成功获得用户委托的访问凭证，你可以用它请求对应的 OpenAPI 。如果 Refresh Token 过期，重复上述步骤。
 
 
+:::warning Note
+请用本文档描述的方式获取auth code，
+不要使用[dd.runtime.permission.requestAuthCode](https://open.dingtalk.com/document/isvapp/obtain-the-micro-application-logon-free-authorization-code)
+和[dd.getAuthCode](https://open.dingtalk.com/document/isvapp/mini-program-free-login)
+这两个jsapi静默授权获取auth code！！！
+:::
+
+
 ## 贴心示例
 ### 示例一
 获取用户个人手机号和个人信息是应用的常见操作。假设你的应用想要调用 OpenAPI [获取用户通讯录个人信息](https://open.dingtalk.com/document/isvapp/dingtalk-retrieve-user-information#)。
