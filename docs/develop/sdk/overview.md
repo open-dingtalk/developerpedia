@@ -12,10 +12,12 @@ sidebar_position: 1
 
 钉钉 [Stream 模式](/docs/learn/stream/overview)支持事件订阅、机器人收消息、卡片回调等能力。
 
-* Java（示例，而不是SDK）：https://github.com/open-dingtalk/dingtalk-stream-sdk-java-quick-start
-* Node.js（SDK+示例）：https://github.com/open-dingtalk/dingtalk-stream-sdk-nodejs
-* Python（SDK+示例）：https://github.com/open-dingtalk/dingtalk-stream-sdk-python
-* Go（SDK+示例）：https://github.com/open-dingtalk/dingtalk-stream-sdk-go
+| 语言      | SDK                                                                                                                                                                                                                                                                       | 源码                                                                                        |
+|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| Java    | [dingtalk-stream](https://s01.oss.sonatype.org/#nexus-search;quick~dingtalk-stream) | [dingtalk-stream-sdk-java](https://github.com/open-dingtalk/dingtalk-stream-sdk-java)     |
+| Node.js | [dingtalk-stream](https://www.npmjs.com/package/dingtalk-stream) <br /> `npm i dingtalk-stream`                                                                                                                                                                           | [dingtalk-stream-sdk-nodejs](https://github.com/open-dingtalk/dingtalk-stream-sdk-nodejs) |
+| Python | [dingtalk-stream](https://pypi.org/project/dingtalk-stream/) <br /> `pip install dingtalk-stream`                                                                                                                                                                         | [dingtalk-stream-sdk-python](https://github.com/open-dingtalk/dingtalk-stream-sdk-python) |
+ | Go | `go get github.com/open-dingtalk/dingtalk-stream-sdk-go`                                                                                                                                                                                                                  | [dingtalk-stream-sdk-go](https://github.com/open-dingtalk/dingtalk-stream-sdk-go)                               |
 
 更多语言 SDK 欢迎社区参与贡献，将在此页面中予以推荐展示，目前测试验证通过的生态 SDK 如下：
 
