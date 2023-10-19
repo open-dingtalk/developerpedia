@@ -19,12 +19,12 @@ npm init -y
 ## 安装依赖
 
 ```shell
-npm install dingtalk-stream-sdk-nodejs commander
+npm install dingtalk-stream commander
 npm install --save-dev typescript ts-node
 npm install
 ```
 
-提醒：对于精通 TypeScript 和 JavaScript 的开发者来说，以上依赖项中，仅 dingtalk-stream-sdk-nodejs 是必须的。其他依赖项可以根据实际项目需要决定是否引入。
+提醒：对于精通 TypeScript 和 JavaScript 的开发者来说，以上依赖项中，仅 dingtalk-stream 是必须的。其他依赖项可以根据实际项目需要决定是否引入。
 
 ## 开发事件订阅服务
 
@@ -45,7 +45,7 @@ npm install
 二、在 event_chat_update 目录下，创建 `index.ts` 文件，文件内容如下：
 
 ```typescript title="index.ts" {15-31} showLineNumbers
-import {DWClient, DWClientDownStream, EventAck} from 'dingtalk-stream-sdk-nodejs';
+import {DWClient, DWClientDownStream, EventAck} from 'dingtalk-stream';
 const { program } = require('commander');
 
 program
