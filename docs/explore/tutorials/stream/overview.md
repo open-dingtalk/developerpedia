@@ -18,6 +18,7 @@ sidebar_position: 1
 
 | 教程                                                       | GitHub 代码仓库                                               |
 |----------------------------------------------------------|-----------------------------------------------------------|
+| [Java 教程文档](/docs/explore/tutorials/stream/bot/java)     | https://github.com/open-dingtalk/dingtalk-tutorial-java   |
 | [Go 教程文档](/docs/explore/tutorials/stream/bot/go)         | https://github.com/open-dingtalk/dingtalk-tutorial-go     |
 | [Python 教程文档](/docs/explore/tutorials/stream/bot/python) | https://github.com/open-dingtalk/dingtalk-tutorial-python |
 
