@@ -21,7 +21,6 @@ npm init -y
 ```shell
 npm install dingtalk-stream commander
 npm install --save-dev typescript ts-node
-npm install
 ```
 
 提醒：对于精通 TypeScript 和 JavaScript 的开发者来说，以上依赖项中，仅 dingtalk-stream 是必须的。其他依赖项可以根据实际项目需要决定是否引入。
