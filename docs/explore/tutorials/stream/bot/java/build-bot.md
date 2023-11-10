@@ -55,7 +55,7 @@ dingtalk.app.client-secret=put-your-client-secret-here
 ```
 
 :::caution 注意事项
-务必将以上命令中"put-your-client-id-here"和"put-your-client-secret-here"替换成实际的值后再运行，否则无法成功建立连接。Client ID 和 Client Secret 可以通过[步骤二: 创建应用文档](create-app)获取。
+务必将以上命令中"put-your-client-id-here"和"put-your-client-secret-here"替换成实际的值后再运行，否则无法成功建立连接。Client ID 和 Client Secret 可以通过[步骤二: 创建应用文档](create-bot)获取。
 :::
 
 二、在 com.example.botechotext 包下面创建 BotEchoTextConsumer 类，用于处理来自的 IM 消息推送：
