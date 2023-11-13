@@ -34,7 +34,7 @@ sidebar_position: 1
 
 
 :::tip
-任意编程语言都可以使用 Stream 模式，而不仅限于以上教程列表中的语言。
+任意编程语言都可以使用 Stream 模式，而不仅限于以上教程列表中的语言。相关 SDK 和协议说明如下：
 
 * SDK：除了以上教程中编程语言之外，还有其他 SDK 可能没有相应教程文档，可以前往 [SDK 文档](/docs/develop/sdk/overview)中查看；
 * 协议：如果在 [SDK文档](/docs/develop/sdk/overview) 中没有找到你想要的 SDK，可以参考 [协议文档](/docs/learn/stream/protocol) 实现 Stream 能力自助接入。
