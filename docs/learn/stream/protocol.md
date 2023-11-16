@@ -42,20 +42,20 @@ Content-Type:application/json
 Accept: application/json
 
 {
-  "clientId" : "${ClientID}", 
-  "clientSecret" : "${ClientSecret}",
-  "subscriptions" : [
-    {
-      "type" : "EVENT",
-      "topic" : "*"
-    },
-    {
-      "type" : "CALLBACK",
-      "topic" : "/v1.0/im/bot/messages/get"
-    }
-  ],
-  ua : dingtalk-sdk-java/1.0.2
-  localIp : "10.34.22.11"
+    "clientId": "${ClientID}",
+    "clientSecret": "${ClientSecret}",
+    "localIp": "10.34.22.11",
+    "subscriptions": [
+        {
+            "topic": "*",
+            "type": "EVENT"
+        },
+        {
+            "topic": "/v1.0/im/bot/messages/get",
+            "type": "CALLBACK"
+        }
+    ],
+    "ua": "dingtalk-sdk-java/1.0.2"
 }
 ```
 
