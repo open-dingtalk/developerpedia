@@ -52,7 +52,9 @@ go get github.com/alibabacloud-go/darabonba-openapi
 **3.3 添加按钮，用于展示审批结果**
 
 在这个步骤中，我们将创建一个新的按钮，用于展示审批结果。当用户点击「拒绝」或「同意」按钮之后，通过第三个按钮展示审批结果，同时隐藏「拒绝」和「审批」按钮。
+
 点击左侧「组件库」对应的图标之后，进入卡片编辑状态，依次点击卡片中「横排按钮」、「添加新按钮」，从而添加一个新的按钮，示意图如下：
+
 ![添加按钮](/img/explore/stream/bot/card-add-button.jpg)
 
 **3.4 设置三个按钮的显示规则**
@@ -103,9 +105,10 @@ go get github.com/alibabacloud-go/darabonba-openapi
 * 无论是「保存」还是「发布」都可以使用该模板
 * 「发布」之后无法再次编辑
 * 「保存」之后可以继续编辑
+
 基于以上考虑，如果不确定是否还需要编辑，建议不要点击「发布」按钮，点击「保存」即可。
 
-特别说明：卡片在客户端上有缓存，编辑之后再次发送的卡片如果在客户端上未生效依旧是旧版本卡片样式的话，可以重启客户端来刷新卡片缓存。
+特别说明：卡片在客户端上有缓存，编辑之后再次发送的卡片如果在客户端上未生效依旧是旧版本卡片样式的话，可以尝试重启客户端来刷新卡片缓存。
 
 **3.6 获取卡片模板 ID**
 
@@ -119,6 +122,14 @@ go get github.com/alibabacloud-go/darabonba-openapi
 ## 开发代码
 
 在 go.mod 相同的目录下，创建 `card_callback.go` 文件，文件内容如下：
+
+:::caution
+需要将代码中这个模板ID更换成你自己创建的模板ID：
+
+`CARD_TEMPLATE_ID   string = "dac1dbec-55af-40c3-be91-6d6882ef3b66.schema"`
+
+备注：模板目前可以公开使用，因此你也可以不做修改直接使用示例中的模版，但是不保证未来是否可以使用，推荐更换成自定义的模板ID。
+:::
 
 ```go title="card_callback.go" showLineNumbers
 package main
