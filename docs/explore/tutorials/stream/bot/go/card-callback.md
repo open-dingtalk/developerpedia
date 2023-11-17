@@ -29,7 +29,7 @@ go get github.com/alibabacloud-go/darabonba-openapi
 **1、进入卡片平台**
 
 可以通过以下任意一种方式进入卡片平台：
-* [开发者后台链接](https://open-dev.dingtalk.com/fe/card)
+* [卡片平台链接](https://open-dev.dingtalk.com/fe/card)
 * 从[开发者后台首页](https://open-dev.dingtalk.com/)进入，顶部菜单点击「开放能力」-「卡片平台」
 
 **2、新建卡片模板**
