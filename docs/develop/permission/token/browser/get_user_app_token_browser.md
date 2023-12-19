@@ -43,14 +43,14 @@ client_id={your_client_id}
 &scope=openid
 ```
 
-| 参数            | 是否必填 | 说明                                                                                                                                                                     |
-|:--------------|:-----|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| client_id     | 是    | 应用的 ClientID。                                                                                                                                                          |
-| redirect_uri  | 是    | 钉钉处理完请求后会把响应发送到此重定向地址。此重定向地址必须注册在对应的应用里。请求中的地址必须是URL编码的。                                                                                                               |
-| state         | 推荐使用 | 这个值会在响应中原样返回，它可以是您想要的任何内容的字符串。                                                                                                                                         |
-| response_type | 是    | 请固定填写code。目前钉钉只提供了授权码一种授权响应模式。                                                                                                                                         |
-| prompt        | 是    | 固定填写consent，会进入授权确认页。                                                                                                                                                  |
-| scope         | 是    | 授权范围，默认展示应用上申请的所有委托类型的权限点。<br/>如填写openid，授权后调用相应 OpenAPI [获取用户通讯录个人信息](https://open.dingtalk.com/document/isvapp/dingtalk-retrieve-user-information#)，获取用户userId。<br/> |
+| 参数            | 是否必填 | 说明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|:--------------|:-----|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| client_id     | 是    | 应用的 ClientID。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| redirect_uri  | 是    | 钉钉处理完请求后会把响应发送到此重定向地址。此重定向地址必须注册在对应的应用里。请求中的地址必须是URL编码的。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| state         | 推荐使用 | 这个值会在响应中原样返回，它可以是您想要的任何内容的字符串。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| response_type | 是    | 请固定填写 code。目前钉钉只提供了授权码一种授权响应模式。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| prompt        | 是    | 固定填写 consent，会进入授权确认页。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| scope         | 是    | 授权范围，通过空格（urlencode 后将空格转义为%20）分隔多个权限 code，默认展示应用上申请的所有委托类型的权限点；<br/>1、如填写 openid，授权后调用 [获取用户 AccessToken](https://open.dingtalk.com/document/isvapp/obtain-user-token) 接口获取用户 AccessToken，然后通过用户 AccessToken 调用 [获取用户通讯录个人信息](https://open.dingtalk.com/document/isvapp/dingtalk-retrieve-user-information#) 接口获取用户 ID 等信息实现免登；<br/>2、如填写 openid%20corpid，则调用 [获取用户 AccessToken](https://open.dingtalk.com/document/isvapp/obtain-user-token) 接口时候，会在接口响应中返回用户选择的组织 ID（Corp ID）；<br/>3、如果需要更多的权限，可以在 [钉钉开发者后台](https://open-dev.dingtalk.com) - 应用开发 - 权限管理 - 个人权限 中申请权限，并填写到 scope 参数中，例如 Contact.User.mobile、Contact.User.Read 等。 |
 
 * 用户会经历登录和授权：
   ![浏览器内用户授权UI](/img/learn/permission/auth_code_flow_browser_ui.png)
@@ -91,5 +91,20 @@ Content-Type:application/json
 }
 ```
 
+:::info
+如果在 *步骤2-1：获取授权码* 中，填写的 scope 参数包含 openid%20corpid 时候，也即 scope 参数同时包含了 openid 和 corpid，那么 */v1.0/oauth2/userAccessToken* 接口除了返回 AccessToken 之外，还会返回 corpId 参数，标识用户登录过程中选择的组织。
+
+因此，如果你希望在免登过程中同时获取登录的用户信息之外，还能够拿到用户的组织 ID（Corp ID），务必在 scope 参数中同时包含 openid 和 corpid。
+:::
+
 ## 步骤三：使用 Access Token 调用 OpenAPI
+
 恭喜你成功获得用户委托的访问凭证，你可以用它请求对应的 OpenAPI 。如果 Refresh Token 过期，重复上述步骤。
+
+例如，可以通过[获取用户通讯录个人信息](https://open.dingtalk.com/document/isvapp/dingtalk-retrieve-user-information)接口，获取用户的ID、头像等信息，用于免登。
+
+##  参考资料
+
+* [官方文档：获取用户访问凭证的的流程](https://open.dingtalk.com/document/isvapp/obtain-identity-credentials)
+* [官方文档：获取用户 AccessToken 的 API 说明](https://open.dingtalk.com/document/isvapp/obtain-user-token)
+* [官方文档：获取用户通讯录个人信息的 API 说明](https://open.dingtalk.com/document/isvapp/dingtalk-retrieve-user-information)

@@ -36,7 +36,7 @@ sidebar_position: 3
         <dependency>
 			<groupId>com.dingtalk.open</groupId>
 			<artifactId>dingtalk-stream</artifactId>
-			<version>1.0.7</version>
+			<version>1.1.0</version>
 		</dependency>
         <!-- ... -->
 	</dependencies>
