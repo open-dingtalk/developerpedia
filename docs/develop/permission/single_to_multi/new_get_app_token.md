@@ -49,10 +49,13 @@ Content-Type:application/json
 
 ## 错误码
 
-| 错误码    | 错误原因                          |
-|--------|-------------------------------|
-| 400002 | 参数不合法。                        |
-| 400004 | 凭证 ClientID/ClientSecret 不合法。 |
+| 状态码 | 错误码                    | 错误原因                      |
+|-----|------------------------|---------------------------|
+| 400 | invalid.client         | 无效的ClientID或ClientSecret。 |
+| 400 | unsupported.grant.type | 不支持此授权类型，请检查授权类型参数。       |
+| 400 | unauthorized.client    | 应用未被授权。                   |
+| 500 | server.error           | 服务器意外错误。                  |
+
 
 
 
