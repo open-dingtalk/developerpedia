@@ -34,8 +34,8 @@ sidebar_position: 1
 授权途径可以有多种：
 
 1. **首次开通授权**：管理员首次开通应用时候需要点击同意完成授权。详见[授权说明](https://open.dingtalk.com/document/isvapp/applications-authorization)
-2. **使用中授权**：如果应用开发者在企业开通之后，为应用添加新的权限点。那么，这个新的权限点就处于未授权状态，需要通过接入“统一授权套件”完成授权，详见[接入流程](https://open.dingtalk.com/document/personalapp/access-process)
-3. **手动紧急授权**：如果应用未接入统一授权套件，出现无权限问题，这时候来不急开发和发布情况下，可以通过这种方式联系企业管理员手动操作授权来应急：企业管理员点击工作台 - 进入管理员Tab页 - 点击应用管理 - 在已开通的应用列表中找到对应的应用，点击应用名称 - 弹出的选择框中，选择“设置” - 点击“授权管理” - 点击“授权”按钮完成授权
+2. **使用中授权**：也即增量授权，如果应用开发者在企业开通之后，为应用添加新的权限点。那么，这个新的权限点就处于未授权状态，需要通过接入“统一授权套件”完成授权，详见[接入流程](https://open.dingtalk.com/document/personalapp/access-process)
+3. **手动紧急授权**：如果应用未接入统一授权套件，出现无权限问题，这时候来不急开发和发布情况下，可以通过这种方式联系企业管理员手动操作授权来应急：企业管理员点击工作台 - 进入管理员Tab页 - 点击应用管理 - 在已开通的应用列表中找到对应的应用，点击应用名称 - 弹出的选择框中，选择“设置” - 点击“授权管理” - 点击“授权”按钮完成授权。详见 [权限管理](/docs/learn/permission/manage/workbench-consent) 文档。
 
 注意：手动紧急授权仅用于特殊情况下应急处理，所有应用必须正确接入[统一授权套件](https://open.dingtalk.com/document/personalapp/access-process)，才能彻底消除接口调用无权限问题。
 
@@ -79,3 +79,8 @@ sidebar_position: 1
 如果你在问题沟通群中反馈问题时候，不小心提交了隐私信息，群管理员发现后将会立即撤回该消息，以避免你的应用和使用你应用的客户信息发生泄漏。
 
 :::
+
+## 参考资料
+
+* [工作台权限管理](/docs/learn/permission/manage/workbench-consent)
+* [统一授权套件](https://open.dingtalk.com/document/personalapp/access-process)
