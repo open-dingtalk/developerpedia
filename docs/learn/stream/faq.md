@@ -90,6 +90,6 @@ wss-open-connection.dingtalk.com
 
 当前使用的域名如下：
 1. HTTPS 域名：api.dingtalk.com，443 端口；
-2. WebSocket 域名： wss-open-connection.dingtalk.com，443 端口，传输层开启了 TLS。\
+2. WebSocket 域名： wss-open-connection.dingtalk.com，443 端口，传输层开启了 TLS。
 
 关于 IP 列表：暂不提供 IP 列表。原因是钉钉服务采用全球多节点部署，IP 数量大、范围广。而且考虑到针对网络攻击的防御，会频繁更换接入 IP，因此无法提供固定的 IP 列表。
