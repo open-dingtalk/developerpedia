@@ -27,6 +27,12 @@ certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)'
 pip install certifi
 /Applications/Python\ 3.10/Install\ Certificates.command
 ```
+
+:::caution 注意事项
+1. 需要替换上面命令中版本号为你实际的 Python 版本号
+2. 如果你的 Python 和 PIP 有特殊的安全路径，需要根据实际调整改为对应版本的 Python 和 PIP
+:::
+
 ### Linux
 
 ```shell
@@ -34,11 +40,6 @@ export SSL_CERT_FILE=/etc/ssl/certs/ca-bundle.crt
 ```
 
 以上方式在 CentOS 中验证 OK。
-
-## 注意事项
-
-1. 需要替换上面命令中版本号为你实际的 Python 版本号
-2. 如果你的 Python 和 PIP 有特殊的安全路径，需要根据实际调整改为对应版本的 Python 和 PIP
 
 ## 其他
 
