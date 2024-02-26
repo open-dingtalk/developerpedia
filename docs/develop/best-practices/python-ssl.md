@@ -17,6 +17,8 @@ certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)'
 
 ## 解决方式
 
+### macOS
+
 可以参考这个页面中方法解决：[StackOverflow: urllib and "SSL: CERTIFICATE_VERIFY_FAILED" Error](https://stackoverflow.com/questions/27835619/urllib-and-ssl-certificate-verify-failed-error)
 
 简单摘要一下，可以采用以下方式解决：
@@ -25,6 +27,13 @@ certificate verify failed: unable to get local issuer certificate (_ssl.c:1129)'
 pip install certifi
 /Applications/Python\ 3.10/Install\ Certificates.command
 ```
+### Linux
+
+```shell
+export SSL_CERT_FILE=/etc/ssl/certs/ca-bundle.crt
+```
+
+以上方式在 CentOS 中验证 OK。
 
 ## 注意事项
 
