@@ -111,7 +111,7 @@ paths:
       # 这是具体的能力意图，直接影响大模型意图路由
       description: 查询天气、查看天气。
       operationId: GetCurrentWeather
-      # 如果配了改关键词，则只有匹配到"查询"情况下才会走到这个技能
+      # 如果配置了关键词，则必须匹配到其中一个关键词情况下才会路由到这个技能
       x-dingtalk-keywords:
         - 查询
       parameters:
