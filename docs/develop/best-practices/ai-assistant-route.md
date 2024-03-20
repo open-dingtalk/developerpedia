@@ -88,7 +88,7 @@ components:
 ```
 测试运行：
 
-![img.png](docs/develop/img/AIAssitantRun1.png)
+![AIAssitantRun1.png](../img/AIAssitantRun1.png)
 
 case1和case2: 意图路由都识别成"查看天气"能力，所以调用了用户定义的能力，从而拿到结果。
 
@@ -160,7 +160,7 @@ components:
 ```
 测试运行
 
-![alt](docs/develop/img/AIAssistantRun2.png)
+![alt](../img/AIAssistantRun2.png)
 
 case1: 由于关键词没命中，直接走了大模型本身能力，并没有路由到用户自定义的能力。
 case2：由于命中关键词，意图路由识别成"查看天气"能力，所以调用了用户定义的能力，从而拿到结果。
