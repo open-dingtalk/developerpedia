@@ -2,14 +2,12 @@
 sidebar_position: 2
 ---
 
-# 2. 创建高级自定义能力
+# 2. 创建自定义能力
 
 
 ## 开发示例
 
-本文以官方天气查询功能为例，详细介绍如何通过 OpenAPI 的方式开发 AI 能力。
-
-天气查询是钉钉 AI 助理提供的官方示例能力，当你询问 AI 助理的时候， AI 助理可以识别出你想要查询的地点和时间，然后通过调用我们提供的天气查询接口获取天气情况，并将天气情况通过卡片展示给你。
+本文以官方天气查询功能为例，详细介绍如何通过在 OpenAPI 配置文件中支持 Stream模式。我们以钉钉 AI 助理提供的官方示例天气查询为例介绍 Stream 模式的配置。
 
 ### 步骤一：编写接口的 OpenAPI 描述文件
 
@@ -84,11 +82,11 @@ components:
           type: string
           description: 风向
 ```
-钉钉开放平台提供了协议扩展字段 x-dingtalk-protocol 来指定通信协议，Stream 模式下无需配置 servers 字段，只需要配置协议名称即可
+钉钉开放平台提供了协议扩展字段 x-dingtalk-protocol 来指定通信协议，Stream 模式下无需配置 servers 字段，只需要配置协议名称接口。
 ```yaml
 x-dingtalk-protocol: stream
 ```
-钉钉开放平台支持自定义能力的多种高级设置，详情可以参考官方文档[高级设置](https://open.dingtalk.com/document/ai-dev/actions-advanced-settings)
+其他高级自定义能力可以参考官方文档[高级设置](https://open.dingtalk.com/document/ai-dev/actions-advanced-settings)
 
 
 ### 步骤二：获取应用凭证
@@ -103,6 +101,7 @@ x-dingtalk-protocol: stream
 #### Step4: 获取应用身份凭证
 ![](./get_app_info.png)
 
+获取到应用凭证之后，我们就可以开始服务端的代码开发。
 
 
 

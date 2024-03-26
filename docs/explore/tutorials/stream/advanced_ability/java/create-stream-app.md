@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# 3. 开发高级自定义能力
+# 3. 开发自定义能力
 
 在本章节中，将会介绍如何用 Java 开发一个聊天机器人服务，实现基本的介绍和发送消息能力。
 
@@ -26,7 +26,7 @@ sidebar_position: 3
  <dependency>
     <groupId>com.dingtalk.open</groupId>
     <artifactId>dingtalk-stream</artifactId>
-    <version>1.2.0</version>
+    <version>1.3.1</version>
 </dependency>
 ```
 
@@ -162,9 +162,9 @@ JSON格式的请求参数，对应的是 OpenAPI yaml 配置文件中 requestBod
 响应数据，为一个JSON格式的字符串。
 
 
-## 运行 AI 助理高级自定义能力
+## 运行 AI 助理自定义能力
 
-在 IDE 中运行 AiActionsStreamApplication.java 中 main 函数，当看到这样的日志输出时候表示运行成功 [DingTalk] connection is established, connectionId=xxxxxxx ,至此，你已成功基于 Stream 协议的高级自定义能力开发，接下来可以体验自己开发的 AI 助理高级自定义能力了。
+在 IDE 中运行 AiActionsStreamApplication.java 中 main 函数，当看到这样的日志输出时候表示运行成功 [DingTalk] connection is established, connectionId=xxxxxxx ,至此，你已成功基于 Stream 协议的自定义能力开发，接下来可以和 AI 助理对话，体验自己开发的 AI 助理自定义能力了。
 
 
 
