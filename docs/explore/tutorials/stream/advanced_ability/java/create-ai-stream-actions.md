@@ -24,7 +24,12 @@ sidebar_position: 2
 * POST 接口的请求和响应当前仅支持 application/json 格式
 * POST 接口参数支持 object 类型，且只能支持一层参数结构（更多能力，敬请期待！）
 :::
-以天气查询为例， yaml格式如下所示
+
+开发者可以通过协议扩展字段 x-dingtalk-protocol 来指定通信协议，启用 Stream 模式可以参考如下配置
+```yaml
+x-dingtalk-protocol: stream
+```
+我们以官方的天气查询为例， 支持 Stream 模式的 yaml配置文件下所示
 ```yaml
 openapi: 3.0.1
 info:
@@ -81,10 +86,6 @@ components:
         wind_direction:
           type: string
           description: 风向
-```
-钉钉开放平台提供了协议扩展字段 x-dingtalk-protocol 来指定通信协议，Stream 模式下无需配置 servers 字段，只需要配置协议名称接口。
-```yaml
-x-dingtalk-protocol: stream
 ```
 其他高级自定义能力可以参考官方文档[高级设置](https://open.dingtalk.com/document/ai-dev/actions-advanced-settings)
 
