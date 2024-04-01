@@ -19,7 +19,7 @@ sidebar_position: 1
 :::
 | 教程                                                  | GitHub 代码仓库 |
 |-----------------------------------------------------|-------------|
-| [直通模式教程文档](/docs/explore/tutorials/assistant_ability/paasthrough_mode) | -           |
+| [直通模式教程文档](/docs/explore/tutorials/assistant_ability/passthrough_mode) | -           |
 
 ### stream 模式
 
