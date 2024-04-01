@@ -55,7 +55,6 @@ import TabItem from '@theme/TabItem';
 | 智能人事开放群     | 23128045    |                                                                |                                                                                                     |
 | 统一授权套件交流群   | 27520024199 | [点击链接查看入群二维码](/img/explore/support/permission.png)             | [点此](https://open.dingtalk.com/document/personalapp/overview-2)了解钉钉统一授权套件                           |
 | Mac 钉钉反馈群   | 21947662    |                                                                | 钉钉 Mac 版本使用问题交流                                                                                     |
-
 备注：
 1. 如果出现群二维码过期，欢迎通过其他技术支持渠道反馈过期问题；
 2. 欢迎[提交贡献](/docs/contrib/overview)，补充更多相关的技术交流群组；
