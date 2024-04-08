@@ -6,16 +6,15 @@ import TabItem from '@theme/TabItem';
 
 # 3. 开通直通模式
 
-### Step1: 创建 AI 助理
-参考文档钉钉官方文档： [创建 AI 助理](https://open.dingtalk.com/document/ai-dev/create-a-dingtalk-ai-assistant)
 
-### Step2: 创建自定义能力
+### 步骤一: 创建自定义能力
 
 ![img.png](create_ability.png)
 
-### Step3: 编写接口的 Yaml 描述文件，我们这里以天气查询为例
+### 步骤二: 编写接口的 Yaml 描述文件，我们这里以天气查询为例
 :::warning
-使用直通模式，所有的参数都必须通过 x-dingtalk-context 来从上下文中获取
+1. 使用直通模式，所有的参数都必须只能通过 x-dingtalk-context 来从上下文中获取。
+2. 描述文件中只能定义一个接口。
 :::
 
 <Tabs>
@@ -54,6 +53,15 @@ paths:
             x-dingtalk-context:
               property: currentUser
               format: userId
+        - name: inputAttribute
+          in: query
+          description: 输入信息属性
+          required: true
+          schema:
+            type: string
+            x-dingtalk-context:
+              property: currentInput
+              format: attribute
       responses:
         '200':
           description: OK
@@ -115,6 +123,12 @@ paths:
                   x-dingtalk-context:
                     property: currentInput
                     format: raw
+                attribute:
+                  type: string
+                  description: 输入属性
+                  x-dingtalk-context :
+                    property: currentInput
+                    format: attribute
                 sender:
                   type: string
                   description: 发送人UserId
@@ -175,7 +189,7 @@ components:
 </TabItem>
 </Tabs>
 
-### Step4: 关闭聊一聊能力
+### 步骤三: 关闭聊一聊能力
 共创群联系钉钉官方后台关闭聊一聊功能
 
 :::warning
