@@ -1,10 +1,10 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# 2. 开通直通模式
+# 3. 开通直通模式
 
 ### Step1: 创建 AI 助理
 参考文档钉钉官方文档： [创建 AI 助理](https://open.dingtalk.com/document/ai-dev/create-a-dingtalk-ai-assistant)
