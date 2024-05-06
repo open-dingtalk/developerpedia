@@ -8,7 +8,7 @@ sidebar_position: 6
 
 本教程的完整代码可以在 [GitHub 仓库](https://github.com/open-dingtalk/dingtalk-tutorial-nodejs)中获取，你也可以跳过本文中构建步骤，直接从 GitHub 中 clone 相关代码。
 
-## 创建 Go 模块
+## 创建 Node.js 应用
 
 ```shell
 mkdir bot_echo_markdown
