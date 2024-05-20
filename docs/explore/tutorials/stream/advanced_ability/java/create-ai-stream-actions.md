@@ -36,8 +36,6 @@ info:
   title: 天气查询
   description: 按地区和日期来查看天气信息，了解气温、湿度、风向等信息。非真实天气数据，仅用于演示，请勿在生产中使用。
   version: v1.0.0
-servers:
-  - url: https://action-example.dingtalk.com
 x-dingtalk-protocol: stream
 paths:
   /v1/actions/example/weather/get:
