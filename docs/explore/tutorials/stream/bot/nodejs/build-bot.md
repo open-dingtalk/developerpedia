@@ -59,44 +59,41 @@ const client = new DWClient({
     clientSecret: options.clientSecret,
 });
 
-const onBotMessage = (event: DWClientDownStream) => {
-    let message = JSON.parse(event.data);
-    let content = (message?.text?.content || '').trim();
-    let webhook = message?.sessionWebhook || '';
+client.registerCallbackListener(TOPIC_ROBOT, async (res) => {
+  // const {messageId} = res.headers;
+  const { text, senderStaffId, sessionWebhook } = JSON.parse(
+    res.data
+  ) as RobotMessage;
+  const body = {
+    at: {
+      atUserIds: [senderStaffId],
+      isAtAll: false,
+    },
+    text: {
+      content:
+        "nodejs-getting-started say : 收到，" + text?.content ||
+        "钉钉,让进步发生",
+    },
+    msgtype: "text",
+  };
 
-    // 回复消息
-    const data = JSON.stringify({
-        'msgtype': 'text',
-        'text': {
-            'content': content,
-        },
-        'at': {
-            'atUserIds': [message?.senderStaffId || '']
-        }
-    })
-    const options = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        }
-    }
-    const req = https.request(webhook, options, (res: any) => {
-        console.log(`状态码: ${res.statusCode}`)
-        res.on('data', (d: any) => {
-            console.log('data:', d)
-        })
-    });
-    req.on('error', (error: any) => {
-        console.error(error);
-    })
-    req.write(data);
-    req.end();
-    return {status: EventAck.SUCCESS, message: 'OK'}; // message 属性可以是任意字符串；
-}
+  const accessToken = await client.getAccessToken();
+  const result = await axios({
+    url: sessionWebhook,
+    method: "POST",
+    responseType: "json",
+    data: body,
+    headers: {
+      "x-acs-dingtalk-access-token": accessToken,
+    },
+  });
 
-client
-    .registerCallbackListener(TOPIC_ROBOT, onBotMessage)
-    .connect();
+  // stream模式下，服务端推送消息到client后，会监听client响应，如果消息长时间未响应会在一定时间内(60s)重试推消息，可以通过此方法返回消息响应，避免多次接收服务端消息。
+  // 机器人topic，可以通过socketCallBackResponse方法返回消息响应
+  if(result?.data){
+    client.socketCallBackResponse(res.headers.messageId, result.data);
+  }
+}).connect();
 ```
 
 以上不超过 60 行的代码实现了这些能力：
