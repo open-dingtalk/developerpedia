@@ -61,6 +61,15 @@ paths:
             x-dingtalk-context:
               property: currentInput
               format: attribute
+        - name: corpId
+          in: query
+          description: 组织信息
+          required: true
+          schema:
+            type: string
+            x-dingtalk-context:
+              property: currentOrg
+              format: corpId
       responses:
         '200':
           description: OK
@@ -102,10 +111,11 @@ info:
   title: 天气查询
   description: 按地区和日期来查看天气信息，了解气温、湿度、风向等信息。非真实天气数据，仅用于演示，请勿在生产中使用。
   version: v1.0.0
+## 推荐使用钉钉 Stream 模式，无需提供公网域名(https://open.dingtalk.com/document/ai-dev/actions-advanced-settings#dc65a46ae9nis)
 x-dingtalk-protocol: stream
 paths:
   /v1/actions/example/weather/get:
-    get:
+    post:
       description: 查询特定地区的天气信息
       summary: 查看天气
       operationId: GetCurrentWeather
@@ -133,6 +143,12 @@ paths:
                   x-dingtalk-context:
                     property: currentUser
                     format: userId
+                corpId:
+                  type: string
+                  description: 组织信息
+                  x-dingtalk-context:
+                    property: currentOrg
+                    format: corpId
       parameters:
         - name: input
           in: query
@@ -229,6 +245,15 @@ paths:
             x-dingtalk-context:
               property: currentInput
               format: attribute
+        - name: corpId
+          in: query
+          description: 组织信息
+          required: true
+          schema:
+            type: string
+            x-dingtalk-context:
+              property: currentOrg
+              format: corpId
       responses:
         '200':
           description: OK
@@ -273,7 +298,7 @@ servers:
   - url: https://action-example.dingtalk.com
 paths:
   /v1/actions/example/weather/get:
-    get:
+    post:
       description: 查询特定地区的天气信息
       summary: 查看天气
       operationId: GetCurrentWeather
@@ -301,6 +326,12 @@ paths:
                   x-dingtalk-context:
                     property: currentUser
                     format: userId
+                corpId:
+                  type: string
+                  description: 组织信息
+                  x-dingtalk-context:
+                    property: currentOrg
+                    format: corpId
       parameters:
         - name: input
           in: query
