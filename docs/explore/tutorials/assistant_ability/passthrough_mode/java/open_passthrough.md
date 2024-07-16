@@ -392,3 +392,5 @@ components:
 必须关闭**智能对话**才可以成功开通直通模式
 :::
 
+### 参考文档
+[获取运行上下文](https://open.dingtalk.com/document/ai-dev/actions-advanced-settings#b6788d573apjp)
