@@ -64,7 +64,7 @@ sidebar_position: 4
 
 ## 3. 关于 RDS 推送
 
-自 2024 年 7 月 24 日起，钉钉开放平台将停止新增应用接入 RDS 推送服务。这一调整不影响现存已成功对接 RDS 推送服务的应用程序，确保业务连续性与稳定性不受干扰，详情参考关于停止新增应用接入RDS推送服务的公告。
+自 2024 年 7 月 24 日起，钉钉开放平台将停止新增应用接入 RDS 推送服务。这一调整不影响现存已成功对接 RDS 推送服务的应用程序，确保业务连续性与稳定性不受干扰，详情参考[关于停止新增应用接入RDS推送服务的公告](https://open.dingtalk.com/document/isvapp/announcement-on-stopping-new-applications-from-accessing-rds-push-service)。
 
 尽管已经成功对接 RDS 推送服务的应用依然可以继续使用，平台侧也会持续维护该能力的稳定性。但是为了更好的处理超大的推送，建议升级到 Stream 或 HTTP 推送。
 
