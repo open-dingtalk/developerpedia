@@ -6,6 +6,11 @@ sidebar_position: 4
 
 如果你的应用在处理 [RDS 推送](https://open.dingtalk.com/document/isvapp/configure-rds-push-table) 时候，遇到异常，可以参考该文档分析与解决。
 
+:::caution 重要提示
+自 2024 年 7 月 24 日起，钉钉开放平台将停止新增应用接入 RDS 推送服务。这一调整不影响现存已成功对接 RDS 推送服务的应用程序，确保业务连续性与稳定性不受干扰，详情参考[关于停止新增应用接入RDS推送服务的公告](https://open.dingtalk.com/document/isvapp/announcement-on-stopping-new-applications-from-accessing-rds-push-service)。
+:::
+
+
 ## 步骤一：检查是否有平台故障发生
 
 阿里云RDS 和钉钉开放平台的故障都有可能导致 RDS 推送异常。你可以通过阿里云和钉钉的服务状态页面查看平台的稳定性状态。
@@ -56,6 +61,25 @@ sidebar_position: 4
 
 * 这两张表中的数据条目数：open_sync_biz_data 和 open_sync_biz_data_medium
 * 这两张表的索引：open_sync_biz_data 和 open_sync_biz_data_medium
+
+## 3. 关于 RDS 推送
+
+自 2024 年 7 月 24 日起，钉钉开放平台将停止新增应用接入 RDS 推送服务。这一调整不影响现存已成功对接 RDS 推送服务的应用程序，确保业务连续性与稳定性不受干扰，详情参考关于停止新增应用接入RDS推送服务的公告。
+
+尽管已经成功对接 RDS 推送服务的应用依然可以继续使用，平台侧也会持续维护该能力的稳定性。但是为了更好的处理超大的推送，建议升级到 Stream 或 HTTP 推送。
+
+主要考虑的原因有以下几点：
+
+1. Stream/HTTP 方式的话，可以针对 DB 负载做削峰填谷（接收到事件后先投递都 MQ 然后异步处理）；
+2. 可以针对 DB 风险做迁移、升级等灵活的变配动作，甚至可以换成其他的数据库；
+3. 部署上也可以解耦合，可以灵活的部署在不同机房，同时双方（钉钉/ISV）都可以灵活的按需扩容，甚至跨机房迁移部署；
+
+## 4. 其他跟 RDS 推送相关的优化项
+
+有些 ISV 应用通过 RDS 推送订阅了 Suite Ticket 推送。当出现高并发引起 RDS 数据库高负载进而导致推送延迟变大，会影响到 Suite Ticket 更新时效性。
+
+建议升级成不依赖 Suite Ticket 的接口来[获取应用的 Access Token](https://opensource.dingtalk.com/developerpedia/docs/develop/permission/single_to_multi/new_get_app_token)，减少依赖以提升稳定性。
+
 
 ## 参考资料
 * [配置RDS数据源](https://open.dingtalk.com/document/isvapp/add-data-sources-for-rds)
