@@ -50,6 +50,10 @@ sidebar_position: 4
 * 事件名称，事件名称需要是这里列举的：[事件订阅总览](https://open.dingtalk.com/document/orgapp/org-event-overview)
 * 事件发生的时间，多个案例可以只提供一个，或者分别罗列
 * 事件对应的组织 CorpId 和 UserId
+* 其他事件属性，例如审批模版 ID、订单号等，信息越丰富就可以更快更准确的分析到原因
+
+涉及到推送性能（含延迟等稳定性指标）的问题，需要提供以下信息辅助分析：
+
 * 这两张表中的数据条目数：open_sync_biz_data 和 open_sync_biz_data_medium
 * 这两张表的索引：open_sync_biz_data 和 open_sync_biz_data_medium
 
