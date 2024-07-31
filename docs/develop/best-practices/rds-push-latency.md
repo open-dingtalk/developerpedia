@@ -46,7 +46,7 @@ sidebar_position: 4
 
 为了高效解决问题，提交反馈时候务必提供以下信息：
 
-* 接收事件推送的应用 ID
+* 接收事件推送的应用 ID，开发者后台可以查看，UUID 格式的应用 ID，例如 ”701ec77c-ee2c-4280-9ff9-79bc8336a2a4“
 * 事件名称，事件名称需要是这里列举的：[事件订阅总览](https://open.dingtalk.com/document/orgapp/org-event-overview)
 * 事件发生的时间，多个案例可以只提供一个，或者分别罗列
 * 事件对应的组织 CorpId 和 UserId
