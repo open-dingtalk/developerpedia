@@ -47,6 +47,9 @@ sidebar_position: 4
 为了高效解决问题，提交反馈时候务必提供以下信息：
 
 * 接收事件推送的应用 ID
+* 事件名称，事件名称需要是这里列举的：[事件订阅总览](https://open.dingtalk.com/document/orgapp/org-event-overview)
+* 事件发生的时间，多个案例可以只提供一个，或者分别罗列
+* 事件对应的组织 CorpId 和 UserId
 * 这两张表中的数据条目数：open_sync_biz_data 和 open_sync_biz_data_medium
 * 这两张表的索引：open_sync_biz_data 和 open_sync_biz_data_medium
 
@@ -54,4 +57,4 @@ sidebar_position: 4
 * [配置RDS数据源](https://open.dingtalk.com/document/isvapp/add-data-sources-for-rds)
 * [配置RDS推送表](https://open.dingtalk.com/document/isvapp/configure-rds-push-table)
 * [钉钉健康状态](https://status.dingtalk.com)
-* [阿里云健康状态](https://status.aliyun.com)g
+* [阿里云健康状态](https://status.aliyun.com)
