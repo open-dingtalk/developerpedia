@@ -33,6 +33,7 @@ sidebar_position: 1
 1. 机器人收消息：创建聊天机器人，通过 Stream 模式来接收发送给机器人的消息，[点此链接](https://open.dingtalk.com/document/orgapp/the-creation-and-installation-of-the-application-robot-in-the)
 2. 事件订阅：各类事件变更通知，例如员工入职离职、审批任务状态变化等，[点此链接](https://open.dingtalk.com/document/orgapp/stream)
 3. 互动卡片回调：创建并发送互动卡片到聊天会话中，当用户在互动卡片点击或其他交互时候，可以通过 Stream 模式接收到这个互动操作内容，[点此链接](https://open.dingtalk.com/document/orgapp/create-and-deliver-cards)
+4. AI助理自定义技能：通过钉钉魔法棒平台创建的AI助理，可以通过Stream模式开发自定义能力，集成业务系统到AI助理中，而且可以支持内网服务和AI助理集成，不需要暴露公网端口
 
 其他场景后续会持续支持上，包括[链接增强](https://open.dingtalk.com/document/orgapp/guide-for-enhancing-the-access-link-of-enterprise-internal-applications)的回调等，可以通过[技术支持](/docs/explore/support)的方式提交反馈。
 
