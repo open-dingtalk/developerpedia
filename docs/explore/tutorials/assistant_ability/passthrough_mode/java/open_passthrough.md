@@ -9,7 +9,8 @@ import TabItem from '@theme/TabItem';
 
 ### 步骤一: 创建自定义能力
 
-![img.png](create_ability.png)
+![img.png](create1.png)
+![img.png](create2.png)
 
 ### 步骤二: 编写接口的 Yaml 描述文件，我们这里以天气查询为例
 :::caution注意事项
@@ -385,11 +386,11 @@ components:
 </TabItem>
 </Tabs>
 
-### 步骤三: 关闭智能对话
+### 步骤三: 确认只有一个技能
 ![img.png](智能对话.png)
 
 :::caution注意事项
-必须关闭**智能对话**才可以成功开通直通模式
+不可以关联其他任何技能才可以成功开通直通模式
 :::
 
 ### 参考文档
