@@ -14,8 +14,9 @@ import TabItem from '@theme/TabItem';
 
 ### 步骤二: 编写接口的 Yaml 描述文件，我们这里以天气查询为例
 :::caution注意事项
-1. 使用直通模式，所有的参数都必须只能通过 x-dingtalk-context 来从上下文中获取。
-2. 描述文件中只能定义一个接口。
+1. 使用直通模式，所有的参数都必须且只能附带 [x-dingtalk-context](https://open.dingtalk.com/document/ai-dev/actions-advanced-settings#b6788d573apjp) 属性来从上下文中获取，不能含有需要大模型提取的参数。
+2. AI 助理下面只能定义一个描述文件且只能定义一个接口。
+3. 关闭或删除智能对话技能。
 :::
 
 <Tabs>
