@@ -25,6 +25,10 @@ cd ai_actions_stream
 python3 -m pip install dingtalk-stream
 ```
 
+:::tip 注意事项
+必须将 dingtalk-stream 升级到 v0.22.0 及以上版本
+:::
+
 ## Python 代码开发
 
 在 `ai_actions_stream` 目录中，创建 `actions.py` 文件，文件内容如下：
