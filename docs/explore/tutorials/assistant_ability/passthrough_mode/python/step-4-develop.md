@@ -8,7 +8,8 @@ import TabItem from '@theme/TabItem';
 # 4. 开发直通模式服务
 
 
-在本章节中，将会介绍如何用 Python 开发一个聊天机器人服务，实现基本的介绍和发送消息能力。
+在本章节中，将会介绍如何用 Python 开发一个 AI 助理的技能，并应用于直通模式。
+该代码是基于钉钉 Stream 模式实现更安全更便捷的实现方式，如果需要采用 HTTP 模式，可以基于 YAML 中接口定义自行实现即可。考虑到开发者都能够熟练开发 HTTP 服务，本文档不做赘述。 
 
 本教程的完整代码可以在 [GitHub 仓库](https://github.com/open-dingtalk/dingtalk-tutorial-python)中获取，你也可以跳过本文中构建步骤，直接从 GitHub 中 clone 相关代码。
 
