@@ -2,6 +2,7 @@
   "label": "应用从单组织到多组织",
   "position": 3,
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "slug": "/develop/permission/upgrade-to-multi-tenant"
   }
 }
