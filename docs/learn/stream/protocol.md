@@ -221,7 +221,7 @@ Headers 中必填的字段如下
 		"time": "1690362102194",
 		"topic": "/v1.0/im/bot/messages/get"
 	},
-	"data": "{\"conversationId\":\"cidAsXSBLnA==\",\"atUsers\":[{\"dingtalkId\":\"$:LWCP_v1:$4*****TgHFUDZ8Qi8qr3\"}],\"chatbotCorpId\":\"ding9f*****cd16741\",\"chatbotUserId\":\"$:LWCP_v1:$*****x3vTgHFUDZ8Qi8qr3\",\"msgId\":\"msgLICYe****HgY4JtMQw==\",\"senderNick\":\"用户\",\"isAdmin\":true,\"senderStaffId\":\"16650***698\",\"sessionWebhookExpiredTime\":1690367502152,\"createA\": 1690362101894,\"senderCorpId\":\"ding9*****d16741\",\"conversationType\":\"2\",\"senderId\":\"$:LWCP_v1:***jqTgIfhRX9Q==\",\"conversationTitle\":\"测试群\",\"isInAtList\":trnWebhook\":\"https://oapi.dingtalk.com/robot/sendBySession?session=76da36b4**********8f59e8\",\"text\":{\"content\":\" 测试数据\"},\"robotCode\":\"ding*****r3xc0b\",\"msgtype\":\"text\"}"
+	"data": "{\"conversationId\":\"cidAsXSBLnA==\",\"atUsers\":[{\"dingtalkId\":\"$:LWCP_v1:$4*****TgHFUDZ8Qi8qr3\"}],\"chatbotCorpId\":\"ding9f*****cd16741\",\"chatbotUserId\":\"$:LWCP_v1:$*****x3vTgHFUDZ8Qi8qr3\",\"msgId\":\"msgLICYe****HgY4JtMQw==\",\"senderNick\":\"用户\",\"isAdmin\":true,\"senderStaffId\":\"16650***698\",\"sessionWebhookExpiredTime\":1690367502152,\"createA\": 1690362101894,\"senderCorpId\":\"ding9*****d16741\",\"conversationType\":\"2\",\"senderId\":\"$:LWCP_v1:***jqTgIfhRX9Q==\",\"conversationTitle\":\"测试群\",\"isInAtList\":true,\"sessionWebhook\":\"https://oapi.dingtalk.com/robot/sendBySession?session=76da36b4**********8f59e8\",\"text\":{\"content\":\" 测试数据\"},\"robotCode\":\"ding*****r3xc0b\",\"msgtype\":\"text\"}"
 }
 ```
 
