@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdeveloperpedia=self.webpackChunkdeveloperpedia||[]).push([[7434],{63780:e=>{e.exports=JSON.parse('{"label":"hello","permalink":"/developerpedia/blog/tags/hello","allTagsPath":"/developerpedia/blog/tags","count":2}')}}]);
