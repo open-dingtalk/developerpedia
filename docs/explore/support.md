@@ -46,7 +46,7 @@ import TabItem from '@theme/TabItem';
 
 | 领域          | 群号          | 群二维码                                                           | 备注                                                                                                  |
 |-------------|-------------|----------------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-| 自定义 AI 助理共创群 | 96330019657 | [点击链接查看入群二维码](/img/explore/support/ai-assistant.png) | [创建钉钉 AI 助理的产品说明文档](https://open.dingtalk.com/document/ai-assistant/create-a-dingtalk-ai-assistant) |
+| 自定义 AI 助理共创群 | 96330019657 | [点击链接查看入群二维码](/img/explore/support/ai-assistant.png) | [创建钉钉 AI 助理的产品说明文档](https://open.dingtalk.com/document/ai-dev/create-a-dingtalk-ai-assistant) |
 | 立春-Stream模式共创群 |             |                                                                | 已满，进入“冻结审批状态”，详见本文后面的“共创群管理规则”                                                                      |
 | 雨水-Stream模式共创群 |             |                                                                | 已满，进入“冻结审批状态”，详见本文后面的“共创群管理规则”                                                                      |
 | 惊蛰-Stream模式共创群 | 70885003679 | [点击链接查看入群二维码](/img/explore/support/stream-mode-group.png)      |                                                                                                     |
