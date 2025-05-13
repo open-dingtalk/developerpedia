@@ -14,7 +14,7 @@ import TabItem from '@theme/TabItem';
 本文假设你已经对钉钉 AI 助理有初步的认识，了解基础概念，并知道如何创建和编辑 AI 助理，为 AI 助理添加自定义插件，以及获得用于代码开发的 Client ID 和 Client Secret。
 可以通过 [链接](/docs/explore/tutorials/assistant_ability/passthrough_mode/python/step-1-intro.md) 来了解
 
-注意：以下示例代码中用到了 session webhook，可以参考 [tools.yaml](https://github.com/chzealot/dingagent-examples-python/blob/main/tools.yaml) 配置。
+注意：以下示例代码中用到了 session webhook，可以参考 [tools.yaml](https://github.com/chzealot/dingagent-examples-python/blob/main/tools.yaml) 配置。关于自定义插件的配置，可以参考 [AI 助理发消息 - Webhook 回复消息模式](https://open.dingtalk.com/document/ai-dev/ai-assistant-message-sending-webhook-reply-message-mode) 和 [自定义能力 - 高级设置](https://open.dingtalk.com/document/ai-dev/actions-advanced-settings)。
 
 
 ## 启动方式
@@ -93,4 +93,5 @@ if __name__ == '__main__':
 
 1. [GitHub - Awesome DingTalk Integration](https://github.com/dingtalk-ai/awesome-dingtalk-integration)
 2. [GitHub - open-dingtalk/dingtalk-stream-sdk-python](https://github.com/open-dingtalk/dingtalk-stream-sdk-python)
-3. [AI 助理发消息 - Webhook 回复消息模式](https://open.dingtalk.com/document/ai-dev/ai-assistant-message-sending-webhook-reply-message-mode)
+3. [官方文档：AI 助理发消息 - Webhook 回复消息模式](https://open.dingtalk.com/document/ai-dev/ai-assistant-message-sending-webhook-reply-message-mode)
+4. [官方文档：自定义能力 - 高级设置](https://open.dingtalk.com/document/ai-dev/actions-advanced-settings)
