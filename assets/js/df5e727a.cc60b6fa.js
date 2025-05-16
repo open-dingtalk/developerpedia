@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdeveloperpedia=self.webpackChunkdeveloperpedia||[]).push([[6873],{10925:e=>{e.exports=JSON.parse('{"label":"docusaurus","permalink":"/developerpedia/blog/tags/docusaurus","allTagsPath":"/developerpedia/blog/tags","count":4}')}}]);

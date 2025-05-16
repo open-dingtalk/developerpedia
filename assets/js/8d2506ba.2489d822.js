@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdeveloperpedia=self.webpackChunkdeveloperpedia||[]).push([[5389],{85227:e=>{e.exports=JSON.parse('{"permalink":"/developerpedia/blog/tags/docusaurus","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
