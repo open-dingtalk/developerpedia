@@ -393,5 +393,13 @@ components:
 不可以关联其他任何技能才可以成功开通直通模式
 :::
 
+### 步骤四: 获取 AI 助理（应用）凭证
+
+此处需要获取 AI 助理（应用）凭证，即 Client ID 和 Client Secret，用于后续的代码开发。
+
+在助理编辑页面，点击「集成开发」选项卡，可以从中可以获取 Client ID 和 Client Secret，以及助理 ID 等信息。
+
+![opendev.png](/img/explore/assistant/passthrough/opendev.png)
+
 ### 参考文档
 [获取运行上下文](https://open.dingtalk.com/document/ai-dev/actions-advanced-settings#b6788d573apjp)

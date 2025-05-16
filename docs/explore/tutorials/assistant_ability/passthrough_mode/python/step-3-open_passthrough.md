@@ -407,9 +407,9 @@ components:
 
 此处需要获取 AI 助理（应用）凭证，即 Client ID 和 Client Secret，用于后续的代码开发。
 
-在编辑自定义能力的页面底部，点击「获取我的应用信息」链接，可以进入开发者后台的 AI 助理（应用）详情页，从中可以获取 Client ID 和 Client Secret。
+在助理编辑页面，点击「集成开发」选项卡，可以从中可以获取 Client ID 和 Client Secret，以及助理 ID 等信息。
 
-![create1.png](/img/explore/assistant/passthrough/opendev.png)
+![opendev.png](/img/explore/assistant/passthrough/opendev.png)
 
 
 ### 参考文档
